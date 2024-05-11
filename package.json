@@ -1,0 +1,29 @@
+{
+  "name": "slangroom-exec",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@slangroom/core": "^1.30.0",
+    "@slangroom/deps": "^1.27.6",
+    "@slangroom/ethereum": "^1.30.0",
+    "@slangroom/fs": "^1.30.0",
+    "@slangroom/git": "^1.30.0",
+    "@slangroom/helpers": "^1.30.0",
+    "@slangroom/http": "^1.30.0",
+    "@slangroom/json-schema": "^1.30.0",
+    "@slangroom/oauth": "^1.30.0",
+    "@slangroom/pocketbase": "^1.30.0",
+    "@slangroom/qrcode": "^1.30.0",
+    "@slangroom/redis": "^1.30.0",
+    "@slangroom/shell": "^1.30.0",
+    "@slangroom/timestamp": "^1.30.0",
+    "@slangroom/wallet": "^1.30.0",
+    "@slangroom/zencode": "^1.30.0"
+  }
+}
