@@ -29,6 +29,7 @@ The script accepts the six parameters that are used in the slangroom-exec comman
 
 For each of the parameters, the script also has option flags:
 
+```
 -c or --conf for conf
 -s or --slangroom-contract for slangroom-contract
 -d or --data for data
@@ -37,19 +38,26 @@ For each of the parameters, the script also has option flags:
 -x or --context for context
 -F or --filename lookup files based on a prefix
 -h or --help to print the help message
+```
 
 #### The named convention `-F` option flag
 
 When you have a suite of files if you follow the formal slangroom name convention as such:
 
+```
 conf: `${prefix}.conf`
 slangroom-contract: `${prefix}.slang`
 data: `${prefix}.data.json`
 keys: `${prefix}.keys.json`
 extra: `${prefix}.extra.json`
 context: `${prefix}.context`
+```
 
-you can just run
+you can just run:
+
+```bash
+slangroom-exec -F prefix
+```
 
 #### STDIN
 
@@ -58,8 +66,26 @@ This also overwrites the `--slangroom-contract` option flag if passed as a dupli
 
 ## Examples
 
-To encode a slangroom-contract and data, you can run:
+To encode a slangroom-contract, you can run:
+
+```bash
+cat slangroom-contract.slang | slexfe
+```
 
 To encode parameters from a file, you can run:
 
-Where myParameters.txt is a file containing your parameters.
+```bash
+slexfe -s slangroom-contract.slang
+```
+
+To load data and keys
+
+```bash
+slexfe -s slangroom-contract.slang  -d slangroom-contract.data.keys -k slangroom-contract.keys.json
+```
+
+To load many files with a correct naming convention
+
+```bash
+slexfe -F prefix
+```
