@@ -27,7 +27,7 @@ clean: ## 🧹 Clean the build
 	@echo "🧹 Cleaned the build"
 
 tests: slangroom-exec ## 🧪 Run tests
-	./test/bats/bin/bats -j 15 test/*.bats
+	./test/bats/bin/bats test/*.bats
 	bun test --coverage
 
 $(LIBS): package.json
