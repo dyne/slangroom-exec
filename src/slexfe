@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # SLangroom-EXec Format Encoder
 # This script is used to encode the format of the slangroom-exec command
 # into a string that can be used in the slangroom-exec command
