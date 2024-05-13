@@ -39,7 +39,7 @@ setup() {
 @test "should fail on empty slangroom" {
     load_fixture "broken_conf"
     run_slangroom_exec
-    assert_output "Slangroom contract is empty"
+    assert_output "Malformed input: Slangroom contract is empty"
     assert_failure 1
 }
 

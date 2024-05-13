@@ -20,14 +20,7 @@ type ZenParamKey = StringKeyOf<ZenParams>;
 
 export const decode = (r: string) => Buffer.from(r, "base64").toString();
 export const decode_and_trim = (r: string) => decode(r).trim();
-export const decode_and_json = (r: string) => {
-	try {
-		return JSON.parse(decode(r));
-	} catch (e) {
-		console.error("JSON is malformed");
-		process.exit(3);
-	}
-};
+export const decode_and_json = (r: string) => JSON.parse(decode(r));
 
 export const slangroom_exec = async (input: string) => {
 	const s = new Slangroom([
@@ -49,8 +42,8 @@ export const slangroom_exec = async (input: string) => {
 
 	const [c, sl, d, k, e, cx] = input.split("\n");
 
-	if (sl.trim().length === 0) {
-		console.error("Slangroom contract is empty");
+	if (!sl || sl.trim().length === 0) {
+		console.error("Malformed input: Slangroom contract is empty");
 		process.exit(1);
 	}
 
