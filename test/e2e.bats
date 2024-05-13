@@ -35,3 +35,17 @@ setup() {
     assert_output --partial "Do you know who greets you? 🥒"
     assert_success
 }
+
+@test "should fail on empty slangroom" {
+    load_fixture "broken_conf"
+    run_slangroom_exec
+    assert_output "Slangroom contract is empty"
+    assert_failure 1
+}
+
+@test "should fail on broken slangroom" {
+    load_fixture "broken_slangroom"
+    run_slangroom_exec
+    assert_output --partial "Invalid Zencode prefix 1: 'Gibberish'"
+    assert_failure 1
+}

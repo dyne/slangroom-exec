@@ -24,6 +24,7 @@
     "@slangroom/shell": "^1.30.0",
     "@slangroom/timestamp": "^1.30.0",
     "@slangroom/wallet": "^1.30.0",
-    "@slangroom/zencode": "^1.30.0"
+    "@slangroom/zencode": "^1.30.0",
+    "type-fest": "^4.18.2"
   }
 }
