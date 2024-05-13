@@ -1,5 +1,7 @@
 .PHONY: help
 
+
+PLATFORMS = linux-x64 linux-arm64 windows-x64 darwin-x64 darwin-arm64
 SOURCES = $(shell find src -type f -name '*.ts')
 LIBS = node_modules
 
@@ -11,10 +13,16 @@ help: ## 🛟  Show this help message
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf " \033[36m 👉 %-14s\033[0m %s\n", $$1, $$2}'
 
 
-slangroom-exec: $(SOURCES) $(LIBS) ## 🛠️  Build slangroom-exec
-	bun build ./src/index.ts --compile --outfile slangroom-exec
+all: $(addprefix slangroom-exec-, $(PLATFORMS)) ## 🛠️  Build all platforms
+
+slangroom-exec: $(SOURCES) $(LIBS) ## 🚀 Build slangroom-exec for the current platform
+	bun build ./src/index.ts --compile --minify --outfile slangroom-exec
+
+slangroom-exec-%: $(SOURCES) $(LIBS)
+	bun build ./src/index.ts --compile --minify --target=bun-$*-modern --outfile slangroom-exec-$*
 
 clean: ## 🧹 Clean the build
+	@rm -f $(addprefix slangroom-exec-, $(PLATFORMS))
 	@rm -f slangroom-exec
 	@echo "🧹 Cleaned the build"
 
