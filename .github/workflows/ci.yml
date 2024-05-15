@@ -48,7 +48,7 @@ jobs:
       id-token: write
     steps:
       - uses: dyne/pnpm@v1
-      - run: pnpm build
+      - run: make all
       - run: pnpm semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
