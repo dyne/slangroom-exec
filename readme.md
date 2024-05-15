@@ -24,7 +24,7 @@ wget https://github.com/dyne/slangroom-exec/releases/latest/download/slangroom-e
 check that works by running:
 
 ```bash
-wget https://raw.githubusercontent.com/dyne/slangroom-exec/main/test/fixtures/welcome.slex| slangroom-exec
+wget -O - https://raw.githubusercontent.com/dyne/slangroom-exec/main/test/fixtures/welcome.slex| slangroom-exec
 ```
 
 ### Demo
