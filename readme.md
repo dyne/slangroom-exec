@@ -15,6 +15,18 @@ to embed [https://dyne.org/slangroom](slangroom) into other languages.
 
 separated each per new-line and encoded in `base64` and outputs the slangroom execution to stoud.
 
+### 💾 Install
+
+```bash
+wget https://github.com/dyne/slangroom-exec/releases/latest/download/slangroom-exec-$(uname)-$(uname -m) -O ~/.local/bin/slangroom-exec && chmod +x ~/.local/bin/slangroom-exec
+```
+
+check that works by running:
+
+```bash
+wget https://raw.githubusercontent.com/dyne/slangroom-exec/main/test/fixtures/welcome.slex| slangroom-exec
+```
+
 ### Demo
 
 ![Slangroom-exec Demo](./docs/slangroom-exec.gif)
