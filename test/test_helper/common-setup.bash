@@ -21,5 +21,5 @@ load_fixture() {
 
 run_slangroom_exec() {
     bats_require_minimum_version 1.5.0
-    run bats_pipe echo "$slang_input" \| ./slangroom-exec
+    run bats_pipe printf "$slang_input" \| ./slangroom-exec
 }
