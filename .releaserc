@@ -1,0 +1,48 @@
+{
+  "repositoryUrl": "git@github.com:dyne/slangroom-exec.git",
+  "dryRun": false,
+  "plugins": [
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "angular",
+        "releaseRules": [
+          { "type": "build", "scope": "deps", "release": "patch" },
+          { "type": "build", "scope": "deps-dev", "release": "patch" }
+        ]
+      }
+    ],
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": true
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "CHANGELOG.md",
+          "package.json"
+        ],
+        "message": "chore(release): 🚀 ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          { "path": "slangroom-exec-darwin-x64", "name": "slangroom-exec-Darwin-x86_64" },
+          { "path": "slangroom-exec-darwin-arm64", "name": "slangroom-exec-Darwin-arm64" },
+          { "path": "slangroom-exec-linux-x64", "name": "slangroom-exec-Linux-x86_64" },
+          { "path": "slangroom-exec-linux-arm64", "name": "slangroom-exec-Linux-arm64" }
+        ]
+      }
+    ]
+  ],
+  "branches": [
+    "main"
+  ]
+}
