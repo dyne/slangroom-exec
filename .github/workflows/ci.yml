@@ -26,15 +26,7 @@ jobs:
         #   - os: windows-latest
         #     architecture: arm64
     steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: recursive
-      - uses: oven-sh/setup-bun@v1
-        with:
-          bun-version: latest
-      - run: brew install parallel
-        if: runner.os == 'macOS'
-      - run: bun i
+      - uses: ./.github/actions/setup
       - run: make tests
 
   release:
@@ -47,7 +39,7 @@ jobs:
       pull-requests: write
       id-token: write
     steps:
-      - uses: dyne/pnpm@v1
+      - uses: ./.github/actions/setup
       - run: make all
       - run: pnpm semantic-release
         env:

@@ -1,0 +1,20 @@
+name: setup
+description: "Setup bun and dependencies"
+runs:
+  using: "composite"
+  steps:
+    - name: checkout
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+    - name: setup bun
+      uses: oven-sh/setup-bun@v1
+      with:
+        bun-version: latest
+    - name: install parallel
+      shell: bash
+      run: brew install parallel
+      if: runner.os == 'macOS'
+    - name: install dependencies
+      run: bun i
+      shell: bash
