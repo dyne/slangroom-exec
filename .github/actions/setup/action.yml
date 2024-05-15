@@ -3,6 +3,9 @@ description: "Setup bun and dependencies"
 runs:
   using: "composite"
   steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: current
     - name: setup bun
       uses: oven-sh/setup-bun@v1
       with:
