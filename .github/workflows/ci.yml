@@ -38,7 +38,6 @@ jobs:
       - run: make tests
 
   release:
-    name: 🔖
     needs: test
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
