@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/dyne/slangroom-exec/compare/v1.0.0...v1.0.1) (2024-05-15)
+
+
+### Bug Fixes
+
+* time type of welcome script ([#2](https://github.com/dyne/slangroom-exec/issues/2)) ([f83cf18](https://github.com/dyne/slangroom-exec/commit/f83cf181e57a1c86f3c414b9e93a2633a495bdef))
+
 # 1.0.0 (2024-05-15)
 
 
