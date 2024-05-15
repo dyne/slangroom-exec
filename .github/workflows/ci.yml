@@ -25,5 +25,7 @@ jobs:
       - uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
+      - run: brew install parallel
+        if: runner.os == 'macOS'
       - run: bun i
       - run: make tests
