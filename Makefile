@@ -1,6 +1,5 @@
 .PHONY: help
 
-
 PLATFORMS = linux-x64 linux-arm64 windows-x64 darwin-x64 darwin-arm64
 SOURCES = $(shell find src -type f -name '*.ts')
 LIBS = node_modules
@@ -27,7 +26,7 @@ clean: ## 🧹 Clean the build
 	@echo "🧹 Cleaned the build"
 
 tests: slangroom-exec ## 🧪 Run tests
-	./test/bats/bin/bats test/*.bats
+	./test/bats/bin/bats -j 15 test/*.bats
 	bun test --coverage
 
 $(LIBS): package.json
