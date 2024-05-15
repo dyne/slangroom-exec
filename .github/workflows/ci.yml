@@ -27,7 +27,5 @@ jobs:
           bun-version: latest
       - run: brew install parallel
         if: runner.os == 'macOS'
-      - run: choco install flock
-        if: runner.os == 'Windows'
       - run: bun i
       - run: make tests
