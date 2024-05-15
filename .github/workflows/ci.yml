@@ -26,6 +26,9 @@ jobs:
         #   - os: windows-latest
         #     architecture: arm64
     steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - uses: ./.github/actions/setup
       - run: make tests
 
@@ -39,6 +42,9 @@ jobs:
       pull-requests: write
       id-token: write
     steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - uses: ./.github/actions/setup
       - run: make all
       - run: pnpm semantic-release

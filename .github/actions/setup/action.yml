@@ -3,10 +3,6 @@ description: "Setup bun and dependencies"
 runs:
   using: "composite"
   steps:
-    - name: checkout
-      uses: actions/checkout@v4
-      with:
-        submodules: recursive
     - name: setup bun
       uses: oven-sh/setup-bun@v1
       with:
