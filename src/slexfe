@@ -4,39 +4,47 @@
 # into a string that can be used in the slangroom-exec command
 
 print_help() {
-    echo -e "\033[1mUsage:\033[0m"
-    echo -e "  $0 [options]\n"
-    echo -e "\033[1mOptions:\033[0m"
-    echo -e "  -c, --conf               conf filename to read"
-    echo -e "  -s, --slangroom-contract slangroom-contract filename to read"
-    echo -e "  -d, --data               data filename to read"
-    echo -e "  -k, --keys               keys filename to read"
-    echo -e "  -e, --extra              extra filename to read"
-    echo -e "  -x, --context            context filename to read"
-    echo -e "  -F, --filename           lookup files based on a prefix"
-    echo -e "  -h, --help               Print this help message"
-    echo -e "\nEncode the parameters into a base64 string."
+    printf "\033[1mUsage:\033[0m"
+    printf "  $0 [options]\n"
+    printf "\033[1mOptions:\033[0m"
+    printf "  -c, --conf               conf filename to read"
+    printf "  -s, --slangroom-contract slangroom-contract filename to read"
+    printf "  -d, --data               data filename to read"
+    printf "  -k, --keys               keys filename to read"
+    printf "  -e, --extra              extra filename to read"
+    printf "  -x, --context            context filename to read"
+    printf "  -F, --filename           lookup files based on a prefix"
+    printf "  -h, --help               Print this help message"
+    printf "\nEncode the parameters into a base64 string."
     exit 1
 }
 
 # Function to encode to base64
 encode_base64() {
-    cat "$1" 2>/dev/null | base64 -w 0
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        cat "$1" 2>/dev/null | base64
+    else
+        cat "$1" 2>/dev/null | base64 -w 0
+    fi
 }
 
 encode_json_base64() {
-    jq -c . "$1" 2>/dev/null | base64 -w 0
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        jq -c . "$1" 2>/dev/null | base64
+    else
+        jq -c . "$1" 2>/dev/null | base64 -w 0
+    fi
 }
 
 # check that jq and getopt are installed
 
 if ! command -v jq &> /dev/null; then
-    echo "jq is not installed. Please install jq to use this script."
+    printf "jq is not installed. Please install jq to use this script."
     exit 1
 fi
 
 if ! command -v getopt &> /dev/null; then
-    echo "getopt is not installed. Please install getopt to use this script."
+    printf "getopt is not installed. Please install getopt to use this script."
     exit 1
 fi
 
@@ -50,7 +58,7 @@ context=""
 
 OPTIONS=$(getopt -o c:s:d:k:e:x:F:h --long conf:,slangroom-contract:,data:,keys:,extra:,context:,filename:,help -n 'parse-options' -- "$@")
 if [ $? -ne 0 ]; then
-    echo "Failed to parse options." >&2
+    printf "Failed to parse options." >&2
     exit 1
 fi
 eval set -- "$OPTIONS"
@@ -82,7 +90,7 @@ while true; do
         --)
             shift; break ;;
         *)
-            echo "Internal error!"; exit 1 ;;
+            printf "Internal error!"; exit 1 ;;
     esac
 done
 
@@ -92,5 +100,5 @@ if [ -z "$slangroom_contract" ]; then
 fi
 
 # Print the encoded string
-echo -e "${conf}\n${slangroom_contract}\n${data}\n${keys}\n${extra}\n${context}"
+printf "${conf}\n${slangroom_contract}\n${data}\n${keys}\n${extra}\n${context}"
 
