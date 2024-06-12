@@ -36,7 +36,7 @@ setup() {
     assert_success
 }
 
-@test "should fail on empty slangroom" {
+@test "should fail on empty or broken contract" {
     load_fixture "broken_conf"
     run_slangroom_exec
     assert_output "Malformed input: Slangroom contract is empty"
@@ -48,4 +48,22 @@ setup() {
     run_slangroom_exec
     assert_output --partial "Invalid Zencode prefix 1: 'Gibberish'"
     assert_failure 1
+}
+
+@test "should fail on empty contract" {
+    load_fixture "empty"
+    run_slangroom_exec
+    assert_output "Malformed input: Slangroom contract is empty"
+    assert_failure 1
+}
+
+@test "should show the version and header" {
+		run ./slangroom-exec -v
+    assert_output --partial "License AGPL-3.0-or-later: GNU AGPL version 3 <https://www.gnu.org/licenses/agpl-3.0.html>"
+		assert_output --partial "Copyright (C) 2024 undefined"
+		assert_output --partial "slangroom-exec"
+		run ./slangroom-exec --version
+    assert_output --partial "License AGPL-3.0-or-later: GNU AGPL version 3 <https://www.gnu.org/licenses/agpl-3.0.html>"
+		assert_output --partial "Copyright (C) 2024 undefined"
+		assert_output --partial "slangroom-exec"
 }
