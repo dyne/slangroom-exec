@@ -1,6 +1,7 @@
 {
   "name": "slangroom-exec",
   "module": "index.ts",
+  "license": "AGPL-3.0-or-later",
   "type": "module",
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
