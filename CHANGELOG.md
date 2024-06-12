@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/dyne/slangroom-exec/compare/v1.0.1...v1.1.0) (2024-06-12)
+
+
+### Features
+
+* add license and --version -v ([#3](https://github.com/dyne/slangroom-exec/issues/3)) ([fa2c6f0](https://github.com/dyne/slangroom-exec/commit/fa2c6f0eff8552586bc2a0256460ff2bd0fe2ee3))
+
 ## [1.0.1](https://github.com/dyne/slangroom-exec/compare/v1.0.0...v1.0.1) (2024-05-15)
 
 
