@@ -5,7 +5,7 @@ This Go package provides an interface to execute Slangroom using an embedded bin
 
 ```go
 import "github.com/dyne/slangroom-exec/bindings/go"
-
+```
 
 ### Example
 
@@ -35,4 +35,4 @@ Then print the 'timestamp'`
     // Print the execution output
     fmt.Println("Execution Output:", result.Output)
 }
-
+```
