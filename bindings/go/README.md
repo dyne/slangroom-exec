@@ -1,13 +1,13 @@
 
 
 ### Usage
-This Go package provides an interface to execute Slangroom  using an embedded binary.
-To use this package, include it in your Go project by importing it:
+This Go package provides an interface to execute Slangroom using an embedded binary. To use this package, include it in your Go project by importing it:
 
-### Example
 ```go
 import "github.com/dyne/slangroom-exec/bindings/go"
-## Usage Example
+
+
+### Example
 
 ```go
 package main
