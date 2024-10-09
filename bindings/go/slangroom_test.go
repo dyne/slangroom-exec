@@ -13,7 +13,7 @@ func TestExecuteSimpleZencode(t *testing.T) {
 Then print the string 'Welcome to slangroom-exec 🥳'`
 	res, success := SlangroomExec("", contract, "", "", "", "")
 	assert.JSONEq(t, `{"output":["Welcome_to_slangroom-exec_🥳"]}`, res.Output)
-	assert.True(t, success, "Expected success but got failure")
+	assert.Nil(t, success, "Expected success but got failure")
 }
 
 func TestExecuteSimpleSlangroom(t *testing.T) {
@@ -31,21 +31,21 @@ Then print the 'timestamp'`
 	} else {
 		t.Errorf("Failed to unmarshal output: %v", err)
 	}
-	assert.True(t, success, "Expected success but got failure")
+	assert.Nil(t, success, "Expected success but got failure")
 }
 
 func TestFailOnBrokenSlangroom(t *testing.T) {
 	contract := `Gibberish`
 	res, success := SlangroomExec("", contract, "", "", "", "")
 	assert.Contains(t, res.Logs, "Invalid Zencode prefix 1: 'Gibberish'")
-	assert.False(t, success, "Expected failure but got success")
+	assert.NotNil(t, success, "Expected failure but got success")
 }
 
 func TestFailOnEmptyContract(t *testing.T) {
 	contract := ``
 	res, success := SlangroomExec("", contract, "", "", "", "")
 	assert.Equal(t, "Malformed input: Slangroom contract is empty\n", res.Logs)
-	assert.False(t, success, "Expected failure but got success")
+	assert.NotNil(t, success, "Expected failure but got success")
 }
 
 func TestReadDataCorrectly(t *testing.T) {
@@ -64,7 +64,7 @@ Then print data`
 }`
 	res, success := SlangroomExec("", contract, data, "", "", "")
 	assert.Contains(t, res.Output, "Do you know who greets you? 🥒")
-	assert.True(t, success, "Expected success but got failure")
+	assert.Nil(t, success, "Expected success but got failure")
 }
 
 func TestFailOnEmptyOrBrokenContract(t *testing.T) {
@@ -72,5 +72,5 @@ func TestFailOnEmptyOrBrokenContract(t *testing.T) {
 	conf := `error`
 	res, success := SlangroomExec(conf, contract, "", "", "", "")
 	assert.Equal(t, "Malformed input: Slangroom contract is empty\n", res.Logs)
-	assert.False(t, success, "Expected failure but got success")
+	assert.NotNil(t, success, "Expected failure but got success")
 }

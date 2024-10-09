@@ -32,6 +32,7 @@ clean: ## Remove build related file
 	rm -fr ./bin
 	rm -fr ./out
 	rm -f ./junit-report.xml checkstyle-report.xml ./coverage.xml ./profile.cov yamllint-checkstyle.xml
+	rm -f slangroom-exec
 
 vendor: ## Copy of all packages needed to support builds and tests in the vendor directory
 	$(GOCMD) mod vendor

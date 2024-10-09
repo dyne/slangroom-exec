@@ -23,6 +23,7 @@ slangroom-exec-%: $(SOURCES) $(LIBS)
 clean: ## 🧹 Clean the build
 	@rm -f $(addprefix slangroom-exec-, $(PLATFORMS))
 	@rm -f slangroom-exec
+	@make -C bindings/go clean
 	@echo "🧹 Cleaned the build"
 
 tests: slangroom-exec ## 🧪 Run tests

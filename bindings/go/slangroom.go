@@ -22,7 +22,7 @@ type SlangResult struct {
 	Logs   string
 }
 
-func SlangroomExec(conf string, contract string, data string, keys string, extra string, context string) (SlangResult, bool) {
+func SlangroomExec(conf string, contract string, data string, keys string, extra string, context string) (SlangResult, error) {
 	exec, err := memexec.New(slangroomBinary)
 	if err != nil {
 		log.Fatalf("Failed to load Slangroom executable from memory: %v", err)
@@ -81,7 +81,7 @@ func SlangroomExec(conf string, contract string, data string, keys string, extra
 	stdoutStr := <-stdoutOutput
 	stderrStr := <-stderrOutput
 
-	return SlangResult{Output: stdoutStr, Logs: stderrStr}, err == nil
+	return SlangResult{Output: stdoutStr, Logs: stderrStr}, err
 }
 
 func captureOutput(pipe io.ReadCloser, output chan<- string) {
