@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/dyne/slangroom-exec/compare/v1.1.0...v1.1.1) (2024-10-09)
+
+
+### Bug Fixes
+
+* **go:** correct error handling ([676f385](https://github.com/dyne/slangroom-exec/commit/676f38597b74c8959d0f1768ea4854271211e949))
+
 # [1.1.0](https://github.com/dyne/slangroom-exec/compare/v1.0.1...v1.1.0) (2024-06-12)
 
 
