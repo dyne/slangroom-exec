@@ -20,8 +20,11 @@ RESET  := $(shell tput -Txterm sgr0)
 
 all: help
 
+slangroom-exec:
+	cd ../.. && make slangroom-exec && cp slangroom-exec bindings/go
+
 ## Build:
-build: vendor ## Build your project and put the output binary in out/bin/
+build: vendor slangroom-exec ## Build your project and put the output binary in out/bin/
 	mkdir -p out/bin
 	GO111MODULE=on $(GOCMD) build -mod vendor -o out/bin/$(BINARY_NAME) .
 

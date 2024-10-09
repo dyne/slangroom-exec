@@ -1,4 +1,4 @@
-module github.com/FilippoTrotter/slangroom-go
+module github.com/dyne/slangroom-exec/bindings/go
 
 go 1.22
 
