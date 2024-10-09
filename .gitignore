@@ -1,6 +1,5 @@
 slangroom-exec
 slangroom-exec-*
-bindings/go/slangroom-exec
 # Based on https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
 
 # Logs
