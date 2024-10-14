@@ -32,6 +32,15 @@ jobs:
       - uses: ./.github/actions/setup
       - run: make tests
 
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: Go Tests
+        run: go test ./...
+        working-directory: bindings/go
+
   release:
     needs: test
     if: github.ref == 'refs/heads/main'
