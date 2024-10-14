@@ -1,21 +1,14 @@
 package slangroom
 
 import (
-	_ "embed"
 	"fmt"
 	"io"
 	"log"
+	"os/exec"
 	"strings"
 
 	b64 "encoding/base64"
-
-	"github.com/amenzhinsky/go-memexec"
 )
-
-// Embedding Zenroom binary using go:embed
-//
-//go:embed slangroom-exec
-var slangroomBinary []byte
 
 type SlangResult struct {
 	Output string
@@ -23,11 +16,6 @@ type SlangResult struct {
 }
 
 func SlangroomExec(conf string, contract string, data string, keys string, extra string, context string) (SlangResult, error) {
-	exec, err := memexec.New(slangroomBinary)
-	if err != nil {
-		log.Fatalf("Failed to load Slangroom executable from memory: %v", err)
-	}
-	defer exec.Close()
 
 	execCmd := exec.Command("slangroom-exec")
 
