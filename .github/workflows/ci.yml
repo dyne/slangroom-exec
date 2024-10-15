@@ -37,6 +37,14 @@ jobs:
         with:
           go-version: '1.22'
 
+      - name: Build slangroom-exec
+        run: make slangroom-exec
+        working-directory: bindings/go
+
+      - name: Add slangroom-exec to PATH
+        run:  echo "${{ github.workspace }}/bindings/go" >> $GITHUB_PATH
+        working-directory: bindings/go
+
       - name: Go Tests
         run: go test ./...
         working-directory: bindings/go
