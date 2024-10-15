@@ -17,8 +17,14 @@ type SlangResult struct {
 
 func SlangroomExec(conf string, contract string, data string, keys string, extra string, context string) (SlangResult, error) {
 
+	if _, err := exec.LookPath("slangroom-exec"); err != nil {
+		return SlangResult{}, fmt.Errorf(
+			"slangroom-exec command not found. Please install it by running:\n\n" +
+				"wget https://github.com/dyne/slangroom-exec/releases/latest/download/slangroom-exec-$(uname)-$(uname -m) \\\n" +
+				"-O ~/.local/bin/slangroom-exec && chmod +x ~/.local/bin/slangroom-exec",
+		)
+	}
 	execCmd := exec.Command("slangroom-exec")
-
 	stdout, err := execCmd.StdoutPipe()
 	if err != nil {
 		log.Fatalf("Failed to create stdout pipe: %v", err)
