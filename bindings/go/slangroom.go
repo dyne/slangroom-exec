@@ -15,7 +15,16 @@ type SlangResult struct {
 	Logs   string
 }
 
-func SlangroomExec(conf string, contract string, data string, keys string, extra string, context string) (SlangResult, error) {
+type SlangInput struct {
+	Conf     string
+	Contract string
+	Data     string
+	Keys     string
+	Extra    string
+	Context  string
+}
+
+func SlangroomExec(input SlangInput) (SlangResult, error) {
 
 	if _, err := exec.LookPath("slangroom-exec"); err != nil {
 		return SlangResult{}, fmt.Errorf(
@@ -40,22 +49,22 @@ func SlangroomExec(conf string, contract string, data string, keys string, extra
 		log.Fatalf("Failed to create stdin pipe: %v", err)
 	}
 
-	b64conf := b64.StdEncoding.EncodeToString([]byte(conf))
+	b64conf := b64.StdEncoding.EncodeToString([]byte(input.Conf))
 	fmt.Fprintln(stdin, b64conf)
 
-	b64contract := b64.StdEncoding.EncodeToString([]byte(contract))
+	b64contract := b64.StdEncoding.EncodeToString([]byte(input.Contract))
 	fmt.Fprintln(stdin, b64contract)
 
-	b64keys := b64.StdEncoding.EncodeToString([]byte(keys))
+	b64keys := b64.StdEncoding.EncodeToString([]byte(input.Keys))
 	fmt.Fprintln(stdin, b64keys)
 
-	b64data := b64.StdEncoding.EncodeToString([]byte(data))
+	b64data := b64.StdEncoding.EncodeToString([]byte(input.Data))
 	fmt.Fprintln(stdin, b64data)
 
-	b64extra := b64.StdEncoding.EncodeToString([]byte(extra))
+	b64extra := b64.StdEncoding.EncodeToString([]byte(input.Extra))
 	fmt.Fprintln(stdin, b64extra)
 
-	b64context := b64.StdEncoding.EncodeToString([]byte(context))
+	b64context := b64.StdEncoding.EncodeToString([]byte(input.Context))
 	fmt.Fprintln(stdin, b64context)
 
 	stdin.Close()
