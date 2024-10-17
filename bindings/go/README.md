@@ -26,7 +26,7 @@ Given I have a 'time' named 'timestamp'
 Then print the string '😘 Welcome to the Slangroom World 🌈'
 Then print the 'timestamp'`
 //Specify your input inside a SlangInput structure
-input := SlangInput{
+input := SlangroomInput{
     Conf:    "", // or simply omit this line if you want it to default to ""
     Contract: contract
     Data:    "", // or simply omit this line if you want it to default to ""
@@ -36,7 +36,7 @@ input := SlangInput{
 }
 
     // Execute  Slangroom
-    result, err := slangroom.SlangroomExec()
+    result, err := slangroom.Exec(input)
     if err != nil {
         log.Fatalf("Execution Failed: %v", err)
     }
