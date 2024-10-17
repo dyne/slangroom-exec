@@ -25,9 +25,18 @@ Given I fetch the local timestamp in seconds and output into 'timestamp'
 Given I have a 'time' named 'timestamp'
 Then print the string '😘 Welcome to the Slangroom World 🌈'
 Then print the 'timestamp'`
+//Specify your input inside a SlangInput structure
+input := SlangroomInput{
+    Conf:    "", // or simply omit this line if you want it to default to ""
+    Contract: contract
+    Data:    "", // or simply omit this line if you want it to default to ""
+    Keys:    "", // or simply omit this line if you want it to default to ""
+    Extra:   "", // or simply omit this line if you want it to default to ""
+    Context: "", // or simply omit this line if you want it to default to ""
+}
 
     // Execute  Slangroom
-    result, err := slangroom.SlangroomExec("", contract, "", "", "", "")
+    result, err := slangroom.Exec(input)
     if err != nil {
         log.Fatalf("Execution Failed: %v", err)
     }
