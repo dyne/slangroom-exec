@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/dyne/slangroom-exec/compare/v1.1.2...v1.2.0) (2024-10-17)
+
+
+### Features
+
+* **go:** format struct as input and refactor the Exec function ([#10](https://github.com/dyne/slangroom-exec/issues/10)) ([4cf243b](https://github.com/dyne/slangroom-exec/commit/4cf243bbf50040d94062173790fae940c7a05ade))
+
 ## [1.1.2](https://github.com/dyne/slangroom-exec/compare/v1.1.1...v1.1.2) (2024-10-09)
 
 
