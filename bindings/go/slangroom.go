@@ -15,7 +15,7 @@ type SlangResult struct {
 	Logs   string
 }
 
-type SlangInput struct {
+type SlangroomInput struct {
 	Conf     string
 	Contract string
 	Data     string
@@ -24,7 +24,7 @@ type SlangInput struct {
 	Context  string
 }
 
-func SlangroomExec(input SlangInput) (SlangResult, error) {
+func Exec(input SlangroomInput) (SlangResult, error) {
 
 	if _, err := exec.LookPath("slangroom-exec"); err != nil {
 		return SlangResult{}, fmt.Errorf(
