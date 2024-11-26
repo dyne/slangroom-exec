@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/dyne/slangroom-exec/compare/v1.2.0...v1.3.0) (2024-11-26)
+
+
+### Features
+
+* add '-i' flag for introspection ([#11](https://github.com/dyne/slangroom-exec/issues/11)) ([fc03459](https://github.com/dyne/slangroom-exec/commit/fc0345937a52e8cfe09b2a91d198c1a987368d20))
+
 # [1.2.0](https://github.com/dyne/slangroom-exec/compare/v1.1.2...v1.2.0) (2024-10-17)
 
 
