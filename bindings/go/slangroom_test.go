@@ -74,3 +74,22 @@ func TestFailOnEmptyOrBrokenContract(t *testing.T) {
 	assert.Equal(t, "Malformed input: Slangroom contract is empty\n", res.Logs)
 	assert.NotNil(t, success, "Expected failure but got success")
 }
+
+func TestIntrsopection(t *testing.T) {
+	contract := `Rule unknown ignore
+Given I fetch the local timestamp in seconds and output into 'timestamp'
+Given I have a 'number' named 'timestamp'
+Then print the 'timestamp'`
+	res, err := Introspect(contract)
+	assert.Contains(t, res, "encoding")
+	var result map[string]interface{}
+	if err := json.Unmarshal([]byte(res), &result); err == nil {
+		ts, ok := result["timestamp"].(map[string]interface{})
+		assert.True(t, ok, "Expected timestamp to be present")
+		_, ok = ts["encoding"]
+		assert.True(t, ok, "Expected encoding to be present")
+	} else {
+		t.Errorf("Failed to unmarshal output: %v", err)
+	}
+	assert.Nil(t, err, "Expected success but got failure")
+}
