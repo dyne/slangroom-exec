@@ -86,7 +86,44 @@ func Exec(input SlangroomInput) (SlangResult, error) {
 
 	return SlangResult{Output: stdoutStr, Logs: stderrStr}, err
 }
+func Introspect(contract string) (string, error) {
 
+	if _, err := exec.LookPath("slangroom-exec"); err != nil {
+		return "", fmt.Errorf(
+			"slangroom-exec command not found. Please install it by running:\n\n" +
+				"wget https://github.com/dyne/slangroom-exec/releases/latest/download/slangroom-exec-$(uname)-$(uname -m) \\\n" +
+				"-O ~/.local/bin/slangroom-exec && chmod +x ~/.local/bin/slangroom-exec",
+		)
+	}
+	execCmd := exec.Command("../../slangroom-exec", "-i")
+	stdout, err := execCmd.StdoutPipe()
+	if err != nil {
+		log.Fatalf("Failed to create stdout pipe: %v", err)
+	}
+
+	stdin, err := execCmd.StdinPipe()
+	if err != nil {
+		log.Fatalf("Failed to create stdin pipe: %v", err)
+	}
+
+	fmt.Fprintln(stdin, contract)
+	stdin.Close()
+
+	err = execCmd.Start()
+	if err != nil {
+		log.Fatalf("Failed to start command: %v", err)
+	}
+
+	stdoutOutput := make(chan string)
+	go captureOutput(stdout, stdoutOutput)
+
+	err = execCmd.Wait()
+
+	stdoutStr := <-stdoutOutput
+
+	return stdoutStr, err
+
+}
 func captureOutput(pipe io.ReadCloser, output chan<- string) {
 	defer close(output)
 

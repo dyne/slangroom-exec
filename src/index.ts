@@ -1,4 +1,5 @@
 import { slangroom_exec } from "./lib";
+import { introspect } from 'zenroom';
 const packageJson = require("../package.json");
 
 const argv = Bun.argv;
@@ -25,11 +26,20 @@ There is NO WARRANTY, to the extent permitted by law.`);
 if (argv.includes("-h") || argv.includes("--help")) {
 	console.log(`Usage: cat <encoded_input> | ${packageJson.name} [options]
 Options:
-  -v, --version   Show version
-  -h, --help      Show this help message`);
+  -v, --version    Show version
+  -h, --help       Show this help message
+  -i, --introspect Output the zenroom introspection of the input`);
 	process.exit(0);
 }
 
 const the_input = await Bun.stdin.text();
-const the_output = await slangroom_exec(the_input);
-await Bun.write(Bun.stdout, the_output);
+
+if (argv.includes("-i")) {
+
+	const the_output = await introspect(the_input);
+
+	await Bun.write(Bun.stdout, JSON.stringify(the_output) + "\n");
+} else {
+	const the_output = await slangroom_exec(the_input);
+	await Bun.write(Bun.stdout, the_output);
+}
