@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/dyne/slangroom-exec/compare/v1.3.0...v1.3.1) (2024-11-29)
+
+
+### Bug Fixes
+
+* **GO:** use absolute slangroom path in Introspect ([1291729](https://github.com/dyne/slangroom-exec/commit/12917296b352879ba22f9e2d12087c895f985278))
+
 # [1.3.0](https://github.com/dyne/slangroom-exec/compare/v1.2.0...v1.3.0) (2024-11-26)
 
 
