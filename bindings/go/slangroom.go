@@ -95,7 +95,7 @@ func Introspect(contract string) (string, error) {
 				"-O ~/.local/bin/slangroom-exec && chmod +x ~/.local/bin/slangroom-exec",
 		)
 	}
-	execCmd := exec.Command("../../slangroom-exec", "-i")
+	execCmd := exec.Command("slangroom-exec", "-i")
 	stdout, err := execCmd.StdoutPipe()
 	if err != nil {
 		log.Fatalf("Failed to create stdout pipe: %v", err)
