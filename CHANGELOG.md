@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/dyne/slangroom-exec/compare/v1.3.1...v1.3.2) (2024-12-17)
+
+
+### Bug Fixes
+
+* **go:** better error handling and avoid race condition ([#12](https://github.com/dyne/slangroom-exec/issues/12)) ([e734548](https://github.com/dyne/slangroom-exec/commit/e7345485022bf67c88e4e673c5959698aa2715b5))
+
 ## [1.3.1](https://github.com/dyne/slangroom-exec/compare/v1.3.0...v1.3.1) (2024-11-29)
 
 
