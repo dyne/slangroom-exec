@@ -1,13 +1,13 @@
 package slangroom
 
 import (
+	"encoding/base64"
 	"fmt"
 	"io"
 	"log"
 	"os/exec"
 	"strings"
-
-	b64 "encoding/base64"
+	"sync"
 )
 
 type SlangResult struct {
@@ -24,8 +24,8 @@ type SlangroomInput struct {
 	Context  string
 }
 
+// Exec runs the slangroom-exec command with the provided input.
 func Exec(input SlangroomInput) (SlangResult, error) {
-
 	if _, err := exec.LookPath("slangroom-exec"); err != nil {
 		return SlangResult{}, fmt.Errorf(
 			"slangroom-exec command not found. Please install it by running:\n\n" +
@@ -33,59 +33,68 @@ func Exec(input SlangroomInput) (SlangResult, error) {
 				"-O ~/.local/bin/slangroom-exec && chmod +x ~/.local/bin/slangroom-exec",
 		)
 	}
+
+	// Prepare command and pipes
 	execCmd := exec.Command("slangroom-exec")
 	stdout, err := execCmd.StdoutPipe()
 	if err != nil {
-		log.Fatalf("Failed to create stdout pipe: %v", err)
+		return SlangResult{}, fmt.Errorf("failed to create stdout pipe: %w", err)
 	}
 
 	stderr, err := execCmd.StderrPipe()
 	if err != nil {
-		log.Fatalf("Failed to create stderr pipe: %v", err)
+		return SlangResult{}, fmt.Errorf("failed to create stderr pipe: %w", err)
 	}
 
 	stdin, err := execCmd.StdinPipe()
 	if err != nil {
-		log.Fatalf("Failed to create stdin pipe: %v", err)
+		return SlangResult{}, fmt.Errorf("failed to create stdin pipe: %w", err)
 	}
-
-	b64conf := b64.StdEncoding.EncodeToString([]byte(input.Conf))
-	fmt.Fprintln(stdin, b64conf)
-
-	b64contract := b64.StdEncoding.EncodeToString([]byte(input.Contract))
-	fmt.Fprintln(stdin, b64contract)
-
-	b64keys := b64.StdEncoding.EncodeToString([]byte(input.Keys))
-	fmt.Fprintln(stdin, b64keys)
-
-	b64data := b64.StdEncoding.EncodeToString([]byte(input.Data))
-	fmt.Fprintln(stdin, b64data)
-
-	b64extra := b64.StdEncoding.EncodeToString([]byte(input.Extra))
-	fmt.Fprintln(stdin, b64extra)
-
-	b64context := b64.StdEncoding.EncodeToString([]byte(input.Context))
-	fmt.Fprintln(stdin, b64context)
-
+	inputs := []string{
+		input.Conf, input.Contract, input.Keys,
+		input.Data, input.Extra, input.Context,
+	}
+	for _, data := range inputs {
+		encoded := base64.StdEncoding.EncodeToString([]byte(data))
+		fmt.Fprintln(stdin, encoded)
+	}
 	stdin.Close()
 
-	err = execCmd.Start()
-	if err != nil {
-		log.Fatalf("Failed to start command: %v", err)
+	// Start command execution
+	if err := execCmd.Start(); err != nil {
+		return SlangResult{}, fmt.Errorf("failed to start command: %w", err)
 	}
 
-	stdoutOutput := make(chan string)
-	stderrOutput := make(chan string)
-	go captureOutput(stdout, stdoutOutput)
-	go captureOutput(stderr, stderrOutput)
+	// Capture stdout and stderr concurrently
+	var wg sync.WaitGroup
+	wg.Add(2)
 
-	err = execCmd.Wait()
+	stdoutOutput := make(chan string, 1)
+	stderrOutput := make(chan string, 1)
 
+	go func() {
+		defer wg.Done()
+		captureOutput(stdout, stdoutOutput)
+	}()
+	go func() {
+		defer wg.Done()
+		captureOutput(stderr, stderrOutput)
+	}()
+
+	waitErr := execCmd.Wait()
+
+	wg.Wait()
+	close(stdoutOutput)
+	close(stderrOutput)
+
+	// Retrieve outputs
 	stdoutStr := <-stdoutOutput
 	stderrStr := <-stderrOutput
 
-	return SlangResult{Output: stdoutStr, Logs: stderrStr}, err
+	return SlangResult{Output: stdoutStr, Logs: stderrStr}, waitErr
 }
+
+// Introspect runs the slangroom-exec command in introspection mode.
 func Introspect(contract string) (string, error) {
 
 	if _, err := exec.LookPath("slangroom-exec"); err != nil {
@@ -95,37 +104,39 @@ func Introspect(contract string) (string, error) {
 				"-O ~/.local/bin/slangroom-exec && chmod +x ~/.local/bin/slangroom-exec",
 		)
 	}
+
 	execCmd := exec.Command("slangroom-exec", "-i")
 	stdout, err := execCmd.StdoutPipe()
 	if err != nil {
-		log.Fatalf("Failed to create stdout pipe: %v", err)
+		return "", fmt.Errorf("failed to create stdout pipe: %w", err)
 	}
 
 	stdin, err := execCmd.StdinPipe()
 	if err != nil {
-		log.Fatalf("Failed to create stdin pipe: %v", err)
+		return "", fmt.Errorf("failed to create stdin pipe: %w", err)
 	}
 
 	fmt.Fprintln(stdin, contract)
 	stdin.Close()
 
-	err = execCmd.Start()
-	if err != nil {
-		log.Fatalf("Failed to start command: %v", err)
+	if err := execCmd.Start(); err != nil {
+		return "", fmt.Errorf("failed to start command: %w", err)
 	}
 
-	stdoutOutput := make(chan string)
-	go captureOutput(stdout, stdoutOutput)
+	// Capture stdout
+	stdoutCh := make(chan string, 1)
+	go captureOutput(stdout, stdoutCh)
 
-	err = execCmd.Wait()
+	// Wait for the command to complete
+	waitErr := execCmd.Wait()
+	close(stdoutCh)
 
-	stdoutStr := <-stdoutOutput
-
-	return stdoutStr, err
-
+	// Retrieve output
+	stdoutStr := <-stdoutCh
+	return stdoutStr, waitErr
 }
+
 func captureOutput(pipe io.ReadCloser, output chan<- string) {
-	defer close(output)
 
 	buf := new(strings.Builder)
 	_, err := io.Copy(buf, pipe)
