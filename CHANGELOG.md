@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/dyne/slangroom-exec/compare/v1.3.2...v1.3.3) (2024-12-18)
+
+
+### Bug Fixes
+
+* specify bun version with .tool-versions file ([#13](https://github.com/dyne/slangroom-exec/issues/13)) ([4e7bc3e](https://github.com/dyne/slangroom-exec/commit/4e7bc3e41c9c62bd75f351662579036b6228a60f))
+
 ## [1.3.2](https://github.com/dyne/slangroom-exec/compare/v1.3.1...v1.3.2) (2024-12-17)
 
 
