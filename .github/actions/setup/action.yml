@@ -7,9 +7,9 @@ runs:
       with:
         node-version: current
     - name: setup bun
-      uses: oven-sh/setup-bun@v1
+      uses: oven-sh/setup-bun@v2
       with:
-        bun-version: latest
+        bun-version-file: ".tool'versions"
     - name: install parallel
       shell: bash
       run: brew install parallel
