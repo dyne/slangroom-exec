@@ -63,7 +63,6 @@ jobs:
         with:
           submodules: recursive
       - uses: ./.github/actions/setup
-      - run: make all
       - run: bun x semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

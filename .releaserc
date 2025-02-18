@@ -31,6 +31,12 @@
       }
     ],
     [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "make all"
+      }
+    ],
+    [
       "@semantic-release/github",
       {
         "assets": [
