@@ -37,7 +37,9 @@
           { "path": "slangroom-exec-darwin-x64", "name": "slangroom-exec-Darwin-x86_64" },
           { "path": "slangroom-exec-darwin-arm64", "name": "slangroom-exec-Darwin-arm64" },
           { "path": "slangroom-exec-linux-x64", "name": "slangroom-exec-Linux-x86_64" },
-          { "path": "slangroom-exec-linux-arm64", "name": "slangroom-exec-Linux-arm64" }
+          { "path": "slangroom-exec-linux-arm64", "name": "slangroom-exec-Linux-arm64" },
+          { "path": "slangroom-exec-linux-aarch64", "name": "slangroom-exec-Linux-aarch64" },
+          { "path": "slangroom-exec-windows-x64.exe", "name": "slangroom-exec-Windows-x86_64.exe" }
         ]
       }
     ]
