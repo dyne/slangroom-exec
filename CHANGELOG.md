@@ -1,3 +1,11 @@
+## [1.3.5](https://github.com/dyne/slangroom-exec/compare/v1.3.4...v1.3.5) (2025-02-18)
+
+
+### Bug Fixes
+
+* add Linux-aarch64 and Windows-x64 to release ([#20](https://github.com/dyne/slangroom-exec/issues/20)) ([e2cd5e6](https://github.com/dyne/slangroom-exec/commit/e2cd5e6d3659bc06fa0acdab51f5eb02b7f8aa27))
+* move build command in release prepare command so that released version match cli version ([#21](https://github.com/dyne/slangroom-exec/issues/21)) ([4332418](https://github.com/dyne/slangroom-exec/commit/4332418688abeb32cf8d38d9cb916c09fd977898))
+
 ## [1.3.4](https://github.com/dyne/slangroom-exec/compare/v1.3.3...v1.3.4) (2024-12-19)
 
 
