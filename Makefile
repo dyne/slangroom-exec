@@ -17,6 +17,9 @@ all: $(addprefix slangroom-exec-, $(PLATFORMS)) ## 🛠️  Build all platforms
 slangroom-exec: $(SOURCES) $(LIBS) ## 🚀 Build slangroom-exec for the current platform
 	bun build ./src/index.ts --compile --minify --outfile slangroom-exec
 
+update: ## 🌍 Update slangroom to latest release
+	bun update @slangroom/core@latest
+
 slangroom-exec-%: $(SOURCES) $(LIBS)
 	bun build ./src/index.ts --compile --minify --target=bun-$*-modern --outfile slangroom-exec-$*
 

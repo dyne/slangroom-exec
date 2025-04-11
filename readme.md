@@ -15,9 +15,14 @@ to embed [https://dyne.org/slangroom](slangroom) into other languages.
 
 separated each per new-line and encoded in `base64` and outputs the slangroom execution to stoud.
 
-### 💾 Install
+## Demo
 
-#### Mise-en-place
+![Slangroom-exec Demo](./docs/slangroom-exec.gif)
+
+
+## 💾 Install
+
+### Mise-en-place
 
 Slangroom-exec is in [mise](https://mise.jdx.dev/) and can be installed with:
 
@@ -25,7 +30,7 @@ Slangroom-exec is in [mise](https://mise.jdx.dev/) and can be installed with:
 mise use "aqua:dyne/slangroom-exec"
 ```
 
-#### Shell
+### Shell
 
 ```bash
 wget https://github.com/dyne/slangroom-exec/releases/latest/download/slangroom-exec-$(uname)-$(uname -m) -O ~/.local/bin/slangroom-exec && chmod +x ~/.local/bin/slangroom-exec
@@ -37,13 +42,17 @@ check that works by running:
 wget -O - https://raw.githubusercontent.com/dyne/slangroom-exec/main/test/fixtures/welcome.slex| slangroom-exec
 ```
 
-### Demo
+## Update
 
-![Slangroom-exec Demo](./docs/slangroom-exec.gif)
+To update the slangroom inside and rebuild slangroom-exec
 
-## SLangroom-EXec Format Encoder
+```
+bun update @slangroom/core@latest
+```
 
-This script is used to encode the format of the slangroom-exec command into a string that can be used in the slangroom-exec command.
+# slexfe (cli tool)
+
+The SLangroom-EXec Format Encode script is used to encode the format of the slangroom-exec command into a string that can be used in the slangroom-exec command.
 
 The script accepts the six parameters that are used in the slangroom-exec command and encodes them into a string. The encoded string is then printed to stdout.
 
