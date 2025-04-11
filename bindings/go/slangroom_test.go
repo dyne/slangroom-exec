@@ -37,7 +37,7 @@ Then print the 'timestamp'`
 func TestFailOnBrokenSlangroom(t *testing.T) {
 	contract := `Gibberish`
 	res, success := Exec(SlangroomInput{Contract: contract})
-	assert.Contains(t, res.Logs, "Invalid Zencode prefix 1: 'Gibberish'")
+	assert.Contains(t, res.Logs, "Zencode Invalid Statement @slangroom/ignored@1.45.0 Error: Maybe missing: \x1b[35mRule unknown ignore\x1b[0m")
 	assert.NotNil(t, success, "Expected failure but got success")
 }
 
