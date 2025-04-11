@@ -1,3 +1,10 @@
+## [1.3.6](https://github.com/dyne/slangroom-exec/compare/v1.3.5...v1.3.6) (2025-04-11)
+
+
+### Bug Fixes
+
+* update all dependencies to latest version ([#24](https://github.com/dyne/slangroom-exec/issues/24)) ([4fd9d23](https://github.com/dyne/slangroom-exec/commit/4fd9d23e3b1fe2f336f11d1f60318ab157fe2d46))
+
 ## [1.3.5](https://github.com/dyne/slangroom-exec/compare/v1.3.4...v1.3.5) (2025-02-18)
 
 
