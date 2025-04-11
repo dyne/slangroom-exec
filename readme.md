@@ -17,6 +17,16 @@ separated each per new-line and encoded in `base64` and outputs the slangroom ex
 
 ### 💾 Install
 
+#### Mise-en-place
+
+Slangroom-exec is in [mise](https://mise.jdx.dev/) and can be installed with:
+
+```
+mise use "aqua:dyne/slangroom-exec"
+```
+
+#### Shell
+
 ```bash
 wget https://github.com/dyne/slangroom-exec/releases/latest/download/slangroom-exec-$(uname)-$(uname -m) -O ~/.local/bin/slangroom-exec && chmod +x ~/.local/bin/slangroom-exec
 ```
