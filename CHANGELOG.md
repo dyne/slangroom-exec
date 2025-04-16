@@ -1,3 +1,10 @@
+## [1.3.7](https://github.com/dyne/slangroom-exec/compare/v1.3.6...v1.3.7) (2025-04-16)
+
+
+### Bug Fixes
+
+* add rdf plugin to slangroom instance ([5b4d271](https://github.com/dyne/slangroom-exec/commit/5b4d2711bef6467f39ece5171ab218805c59b1ef))
+
 ## [1.3.6](https://github.com/dyne/slangroom-exec/compare/v1.3.5...v1.3.6) (2025-04-11)
 
 
