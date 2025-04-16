@@ -69,3 +69,11 @@ setup() {
 		assert_output --partial "Copyright (C) 2024 undefined"
 		assert_output --partial "slangroom-exec"
 }
+
+@test "simple chain execution" {
+	encoded=$(src/slexfe -s test/fixtures/chain.yaml -d test/fixtures/chain.data.json)
+    printf -v slang_input '%s' "$encoded"
+	run_slangroom_exec_chain
+	assert_output '{"hello":"hello from data!","output":["Hello,_world!"]}'
+	assert_success
+}

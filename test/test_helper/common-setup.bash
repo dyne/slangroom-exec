@@ -23,3 +23,8 @@ run_slangroom_exec() {
     bats_require_minimum_version 1.5.0
     run bats_pipe printf "$slang_input" \| ./slangroom-exec
 }
+
+run_slangroom_exec_chain() {
+    bats_require_minimum_version 1.5.0
+    run bats_pipe printf "$slang_input" \| ./slangroom-exec -c
+}
