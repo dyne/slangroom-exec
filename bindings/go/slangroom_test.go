@@ -93,3 +93,16 @@ Then print the 'timestamp'`
 	}
 	assert.Nil(t, err, "Expected success but got failure")
 }
+
+func TestChain(t *testing.T) {
+	chain := `
+steps:
+  - id: hello
+    zencode: |
+      Given I have a 'string' named 'hello'
+      Then print the 'hello'
+      Then print the string 'Hello, world!'`
+	  res, success := ExecChain(SlangroomChainInput{Chain: chain, Data: `{"hello": "Welcome to slangroom-exec for chains 🥳"}`})
+	  assert.JSONEq(t, `{"output":["Hello,_world!"],"hello":"Welcome to slangroom-exec for chains 🥳"}`, res.Output)
+	  assert.Nil(t, success, "Expected success but got failure")
+}
