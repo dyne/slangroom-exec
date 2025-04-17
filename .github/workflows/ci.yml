@@ -29,24 +29,14 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: recursive
+      - uses: jdx/mise-action@v2
       - uses: ./.github/actions/setup
       - run: make tests
-
-
-      - uses: actions/setup-go@v5
-        with:
-          go-version: '1.22'
-
       - name: Build slangroom-exec
         run: make slangroom-exec
         working-directory: bindings/go
-
-      - name: Add slangroom-exec to PATH
-        run:  echo "${{ github.workspace }}/bindings/go" >> $GITHUB_PATH
-        working-directory: bindings/go
-
       - name: Go Tests
-        run: go test ./...
+        run: make test
         working-directory: bindings/go
 
   release:
