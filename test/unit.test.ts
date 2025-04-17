@@ -5,6 +5,7 @@ import {
 	decode_and_trim,
 	encode,
 	slangroom_exec,
+	slangroom_chain_exec,
 } from "../src/lib";
 
 test("the encode() utility should work ok", () => {
@@ -277,5 +278,24 @@ describe("slangroom_exec", () => {
 
 		const error = await new Response(proc.stderr).text();
 		expect(error).toContain("EXTRA is malformed");
+	});
+});
+
+describe("slangroom_chain_exec", () => {
+	const chain = `
+steps:
+  - id: hello
+    zencode: |
+      Given I have a 'string' named 'hello'
+      Then print the 'hello'
+      Then print the string 'Hello, world!'`;
+	test.each([
+		[
+			encode("", chain, '{"hello":"hello from data!"}', "", ""),
+			'{"hello":"hello from data!","output":["Hello,_world!"]}',
+		],
+	])(`the slangroom_chain_exec() should work correctly`, async (input, want) => {
+		const have = await slangroom_chain_exec(input);
+		expect(have).toBe(want);
 	});
 });

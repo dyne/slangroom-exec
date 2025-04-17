@@ -1,0 +1,4 @@
+steps:
+  - id: hello from file
+    zencodeFromFile: test/fixtures/chain_contract.slang
+    keysFromFile: test/fixtures/chain_contract.keys.json

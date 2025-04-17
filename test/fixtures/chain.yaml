@@ -1,0 +1,6 @@
+steps:
+  - id: hello
+    zencode: |
+      Given I have a 'string' named 'hello'
+      Then print the 'hello'
+      Then print the string 'Hello, world!'

@@ -14,6 +14,7 @@ import { shell } from "@slangroom/shell";
 import { timestamp } from "@slangroom/timestamp";
 import { wallet } from "@slangroom/wallet";
 import { zencode } from "@slangroom/zencode";
+import { execute } from "@dyne/slangroom-chain";
 
 import type { ZenParams } from "@slangroom/shared";
 import type { StringKeyOf } from "type-fest";
@@ -94,3 +95,12 @@ export const encode = (
 		b64(ctx ?? ""),
 	].join("\n");
 };
+
+export const slangroom_chain_exec = async (input: string) => {
+	// matain same input, but only contract and data are used to run a chain
+	const [_, sl, d] = input.split("\n");
+	const chain = decode(sl);
+	const data = decode(d);
+	const result = await execute(chain, data);
+	return result;
+}

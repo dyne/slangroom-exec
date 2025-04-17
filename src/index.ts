@@ -1,4 +1,4 @@
-import { slangroom_exec } from "./lib";
+import { slangroom_chain_exec, slangroom_exec } from "./lib";
 import { introspect } from 'zenroom';
 const packageJson = require("../package.json");
 
@@ -28,6 +28,7 @@ if (argv.includes("-h") || argv.includes("--help")) {
 Options:
   -v, --version    Show version
   -h, --help       Show this help message
+  -c, --chain      Execute the slangroom chain
   -i, --introspect Output the zenroom introspection of the input`);
 	process.exit(0);
 }
@@ -39,6 +40,9 @@ if (argv.includes("-i")) {
 	const the_output = await introspect(the_input);
 
 	await Bun.write(Bun.stdout, JSON.stringify(the_output) + "\n");
+} else if (argv.includes("-c")) {
+	const the_output = await slangroom_chain_exec(the_input);
+	await Bun.write(Bun.stdout, the_output);
 } else {
 	const the_output = await slangroom_exec(the_input);
 	await Bun.write(Bun.stdout, the_output);
