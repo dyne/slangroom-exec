@@ -71,9 +71,17 @@ setup() {
 }
 
 @test "simple chain execution" {
-	encoded=$(src/slexfe -s test/fixtures/chain.yaml -d test/fixtures/chain.data.json)
+    encoded=$(src/slexfe -s test/fixtures/chain.yaml -d test/fixtures/chain.data.json)
     printf -v slang_input '%s' "$encoded"
-	run_slangroom_exec_chain
-	assert_output '{"hello":"hello from data!","output":["Hello,_world!"]}'
-	assert_success
+    run_slangroom_exec_chain
+    assert_output '{"hello":"hello from data!","output":["Hello,_world!"]}'
+    assert_success
+}
+
+@test "execute chain that read contracts and keys from file" {
+    encoded=$(src/slexfe -s test/fixtures/chain_sl_from_file.yaml -d test/fixtures/chain_sl_from_file.data.json)
+    printf -v slang_input '%s' "$encoded"
+    run_slangroom_exec_chain
+    assert_output '{"hello_from_data":"hello from data!","hello_from_keys":"hello from keys!","output":["Hello,_world!"]}'
+    assert_success
 }

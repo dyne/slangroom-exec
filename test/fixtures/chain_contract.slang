@@ -1,0 +1,5 @@
+Given I have a 'string' named 'hello_from_data'
+Given I have a 'string' named 'hello_from_keys'
+Then print the 'hello_from_data'
+Then print the 'hello_from_keys'
+Then print the string 'Hello, world!'
