@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/dyne/slangroom-exec/compare/v1.3.7...v1.4.0) (2025-04-17)
+
+
+### Features
+
+* add slangroom chain execution thorugh the use of -c or --chain flag ([#25](https://github.com/dyne/slangroom-exec/issues/25)) ([3adde24](https://github.com/dyne/slangroom-exec/commit/3adde24ccfacbc3c75c197203d4f07caff9e0681))
+
 ## [1.3.7](https://github.com/dyne/slangroom-exec/compare/v1.3.6...v1.3.7) (2025-04-16)
 
 
