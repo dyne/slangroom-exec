@@ -11,6 +11,7 @@ concurrency:
 
 jobs:
   test:
+    name: 🧪 Test
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -40,9 +41,12 @@ jobs:
         working-directory: bindings/go
 
   release:
+    name: 📣 Release
     needs: test
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    outputs:
+      release: ${{ steps.release.outputs.release }}
     permissions:
       contents: write
       issues: write
@@ -53,7 +57,21 @@ jobs:
         with:
           submodules: recursive
       - uses: ./.github/actions/setup
-      - run: bun x semantic-release
+      - run: |
+          bun x semantic-release
+          if [[ `git tag --points-at HEAD` == "" ]]; then
+            echo "release=False" >> $GITHUB_OUTPUT
+          else
+            echo "release=True" >> $GITHUB_OUTPUT
+          fi
+        id: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  publish_docker_image:
+    name: 🐳 Publish Docker image
+    needs: [release]
+    if: ${{ needs.release.outputs.release == 'True' }}
+    uses: ForkbombEu/workflows/.github/workflows/publish-ghcr.yml@main
+    secrets: inherit
