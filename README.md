@@ -102,16 +102,16 @@ to stdout.
 
 ### 🧩 Usage
 
-As said before `slexfe` can take in input up to 6 files and they should be iondicate with the
+As said before `slexfe` can take in input up to 6 files and they should be iondicated with the
 right flag:
 
 ```
--c or --conf                for conf
--s or --slangroom-contract  for slangroom-contract
--d or --data                for data
--k or --keys                for keys
--e or --extra               for extra
--x or --context             for context
+-c  for conf
+-s  for slangroom-contract
+-d  for data
+-k  for keys
+-e  for extra
+-x  for context
 ```
 
 If all the files have the same name and they follow the slangroom name contention, that is:
