@@ -39,6 +39,7 @@ separated each per new-line and encoded in `base64` (it seems difficult, but [sl
 - [🎮 Quick start](#-quick-start)
 - [💾 Build](#-build)
 - [🪛 Slexfe](#-slexfe)
+	- [💾 Install](#-install)
 	- [🧩 Usage](#-usage)
 - [🐛 Troubleshooting \& debugging](#-troubleshooting--debugging)
 - [😍 Acknowledgements](#-acknowledgements)
@@ -99,6 +100,14 @@ input of slangroom-exec, *i.e.*
 
 into the base64 multiline encoded machine-readable version of it and the result is printed
 to stdout.
+
+### 💾 Install
+
+Slexfe can be installed directly from github releases:
+
+```bash
+wget https://github.com/dyne/slangroom-exec/releases/latest/download/slexfe -O ~/.local/bin/slexfe && chmod +x ~/.local/bin/slexfe
+```
 
 ### 🧩 Usage
 
