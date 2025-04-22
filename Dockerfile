@@ -1,8 +1,8 @@
-FROM debian:12-slim
+FROM dyne/devuan:excalibur
 
 COPY src/slexfe /usr/local/bin/
 COPY Makefile Makefile
-COPY src /src
+COPY src ./src
 COPY bun.lockb bun.lockb
 COPY .tool-versions .tool-versions
 COPY package.json package.json
