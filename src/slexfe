@@ -6,16 +6,16 @@
 print_help() {
     printf "\033[1mUsage:\033[0m"
     printf "  $0 [options]\n"
-    printf "\033[1mOptions:\033[0m"
-    printf "  -c conf               conf filename to read"
-    printf "  -s slangroom-contract slangroom-contract filename to read"
-    printf "  -d data               data filename to read"
-    printf "  -k keys               keys filename to read"
-    printf "  -e extra              extra filename to read"
-    printf "  -x context            context filename to read"
-    printf "  -F filename           lookup files based on a prefix"
-    printf "  -h                    Print this help message"
-    printf "\nEncode the parameters into a base64 string."
+    printf "\033[1mOptions:\033[0m\n"
+    printf "  -c conf               conf filename to read\n"
+    printf "  -s slangroom-contract slangroom-contract filename to read\n"
+    printf "  -d data               data filename to read\n"
+    printf "  -k keys               keys filename to read\n"
+    printf "  -e extra              extra filename to read\n"
+    printf "  -x context            context filename to read\n"
+    printf "  -F filename           lookup files based on a prefix\n"
+    printf "  -h                    Print this help message\n"
+    printf "\nEncode the parameters into a base64 string.\n"
     exit 1
 }
 
