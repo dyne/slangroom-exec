@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/dyne/slangroom-exec/compare/v1.4.2...v1.5.0) (2025-04-22)
+
+
+### Features
+
+* Dockerfile and docker container image release ([#29](https://github.com/dyne/slangroom-exec/issues/29)) ([a04e7dc](https://github.com/dyne/slangroom-exec/commit/a04e7dc6ed179576131a6ab408e548562cf14045))
+
 ## [1.4.2](https://github.com/dyne/slangroom-exec/compare/v1.4.1...v1.4.2) (2025-04-22)
 
 ## [1.4.1](https://github.com/dyne/slangroom-exec/compare/v1.4.0...v1.4.1) (2025-04-22)
