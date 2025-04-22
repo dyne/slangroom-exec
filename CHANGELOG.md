@@ -1,6 +1,18 @@
 # [1.5.0](https://github.com/dyne/slangroom-exec/compare/v1.4.2...v1.5.0) (2025-04-22)
 
 
+### Bug Fixes
+
+* **archive:** add .exe to windows executable ([#31](https://github.com/dyne/slangroom-exec/issues/31)) ([e952ac9](https://github.com/dyne/slangroom-exec/commit/e952ac9cca2ede7f561e2880f46ee99a7f246e92))
+
+
+### Features
+
+* Dockerfile and docker container image release ([#29](https://github.com/dyne/slangroom-exec/issues/29)) ([a04e7dc](https://github.com/dyne/slangroom-exec/commit/a04e7dc6ed179576131a6ab408e548562cf14045))
+
+# [1.5.0](https://github.com/dyne/slangroom-exec/compare/v1.4.2...v1.5.0) (2025-04-22)
+
+
 ### Features
 
 * Dockerfile and docker container image release ([#29](https://github.com/dyne/slangroom-exec/issues/29)) ([a04e7dc](https://github.com/dyne/slangroom-exec/commit/a04e7dc6ed179576131a6ab408e548562cf14045))
