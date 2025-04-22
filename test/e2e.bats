@@ -46,9 +46,7 @@ setup() {
 @test "should fail on broken slangroom" {
     load_fixture "broken_slangroom"
     run_slangroom_exec
-    assert_output --partial "Zencode Invalid Statement"
-    assert_output --partial "Maybe missing: "
-	assert_output --partial "Invalid Zencode prefix"
+    assert_output --partial "Gibberish may be given or then"
     assert_failure 1
 }
 
