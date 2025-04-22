@@ -33,7 +33,7 @@
     [
       "@semantic-release/exec",
       {
-        "prepareCmd": "make all"
+        "prepareCmd": "make all && make archive"
       }
     ],
     [
@@ -46,7 +46,8 @@
           { "path": "slangroom-exec-linux-arm64", "name": "slangroom-exec-Linux-arm64" },
           { "path": "slangroom-exec-linux-aarch64", "name": "slangroom-exec-Linux-aarch64" },
           { "path": "slangroom-exec-windows-x64.exe", "name": "slangroom-exec-Windows-x86_64.exe" },
-					{ "path": "src/slexfe", "name": "slexfe" }
+          { "path": "src/slexfe", "name": "slexfe" },
+          { "path": "slangroom-exec.tar.gz", "name": "slangroom-exec.tar.gz" }
         ]
       }
     ]

@@ -43,3 +43,6 @@ $(LIBS): package.json
 video:
 	PATH=docs:$$PATH
 	cd docs && vhs slangroom-exec.tape
+
+archive:
+	@tar -czf slangroom-exec.tar.gz $(addprefix slangroom-exec-, $(PLATFORMS))
