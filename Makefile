@@ -45,4 +45,4 @@ video:
 	cd docs && vhs slangroom-exec.tape
 
 archive:
-	@tar -czf slangroom-exec.tar.gz $(addprefix slangroom-exec-, $(PLATFORMS))
+	@tar -czf slangroom-exec.tar.gz $(foreach platform, $(PLATFORMS), $(addsuffix $(if $(filter windows-%,$(platform)),.exe), slangroom-exec-$(platform))) -C src slexfe
