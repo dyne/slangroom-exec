@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/dyne/slangroom-exec/compare/v1.4.0...v1.4.1) (2025-04-22)
+
+
+### Bug Fixes
+
+* improve help message of slexfe dividing flags with newlines ([#28](https://github.com/dyne/slangroom-exec/issues/28)) ([89e72ec](https://github.com/dyne/slangroom-exec/commit/89e72ec12b82f8718174e604bf42dce6e506c884))
+
 # [1.4.0](https://github.com/dyne/slangroom-exec/compare/v1.3.7...v1.4.0) (2025-04-17)
 
 
