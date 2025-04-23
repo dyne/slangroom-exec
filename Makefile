@@ -1,6 +1,9 @@
 .PHONY: help
 
 PLATFORMS = linux-x64 linux-arm64 linux-aarch64 windows-x64 darwin-x64 darwin-arm64
+BINARIES_NO_EXT := $(addprefix slangroom-exec-, $(PLATFORMS))
+ARCHIVES := $(addsuffix .tar.gz, $(BINARIES_NO_EXT))
+BINARIES := $(foreach binary, $(BINARIES_NO_EXT), ${binary}$(if $(filter slangroom-exec-windows-%,$(binary)),.exe))
 SOURCES = $(shell find src -type f -name '*.ts')
 LIBS = node_modules
 
@@ -12,7 +15,7 @@ help: ## 🛟  Show this help message
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf " \033[36m 👉 %-14s\033[0m %s\n", $$1, $$2}'
 
 
-all: $(addprefix slangroom-exec-, $(PLATFORMS)) ## 🛠️  Build all platforms
+all: $(BINARIES_NO_EXT) ## 🛠️  Build all platforms
 
 slangroom-exec: $(SOURCES) $(LIBS) ## 🚀 Build slangroom-exec for the current platform
 	bun build ./src/index.ts --compile --minify --outfile slangroom-exec
@@ -24,7 +27,8 @@ slangroom-exec-%: $(SOURCES) $(LIBS)
 	bun build ./src/index.ts --compile --minify --target=bun-$*-modern --outfile slangroom-exec-$*
 
 clean: ## 🧹 Clean the build
-	@rm -f $(addprefix slangroom-exec-, $(PLATFORMS))
+	@rm -f $(BINARIES)
+	@rm -f $(ARCHIVES)
 	@rm -f slangroom-exec
 	@make -C bindings/go clean
 	@echo "🧹 Cleaned the build"
@@ -44,5 +48,10 @@ video:
 	PATH=docs:$$PATH
 	cd docs && vhs slangroom-exec.tape
 
-archive:
-	@tar -czf slangroom-exec.tar.gz $(foreach platform, $(PLATFORMS), $(addsuffix $(if $(filter windows-%,$(platform)),.exe), slangroom-exec-$(platform))) -C src slexfe
+archives: $(BINARIES_NO_EXT) $(ARCHIVES) ## 📦 Create archives containing slangroom-exec and slexfe for all platforms
+
+slangroom-exec-%.tar.gz:
+	tar -czf $@ \
+		--transform='s|slangroom-exec-$*$(if $(filter windows-%,$*),\.exe)|slangroom-exec|' \
+		slangroom-exec-$*$(if $(filter windows-%,$*),.exe) \
+		-C src slexfe
