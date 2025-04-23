@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024-2025 Dyne.org foundation
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 package slangroom
 
 import (
@@ -102,7 +106,7 @@ steps:
       Given I have a 'string' named 'hello'
       Then print the 'hello'
       Then print the string 'Hello, world!'`
-	  res, success := ExecChain(SlangroomChainInput{Chain: chain, Data: `{"hello": "Welcome to slangroom-exec for chains 🥳"}`})
-	  assert.JSONEq(t, `{"output":["Hello,_world!"],"hello":"Welcome to slangroom-exec for chains 🥳"}`, res.Output)
-	  assert.Nil(t, success, "Expected success but got failure")
+	res, success := ExecChain(SlangroomChainInput{Chain: chain, Data: `{"hello": "Welcome to slangroom-exec for chains 🥳"}`})
+	assert.JSONEq(t, `{"output":["Hello,_world!"],"hello":"Welcome to slangroom-exec for chains 🥳"}`, res.Output)
+	assert.Nil(t, success, "Expected success but got failure")
 }

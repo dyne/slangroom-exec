@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024-2025 Dyne.org foundation
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 setup() {
     load 'test_helper/common-setup'
 

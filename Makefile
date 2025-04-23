@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024-2025 Dyne.org foundation
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 .PHONY: help
 
 PLATFORMS = linux-x64 linux-arm64 linux-aarch64 windows-x64 darwin-x64 darwin-arm64

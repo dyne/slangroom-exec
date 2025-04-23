@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024-2025 Dyne.org foundation
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Based on a true story on:
 # https://gist.github.com/thomaspoignant/5b72d579bd5f311904d973652180c705
 

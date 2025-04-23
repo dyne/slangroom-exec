@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024-2025 Dyne.org foundation
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import { slangroom_chain_exec, slangroom_exec } from "./lib";
 import { introspect } from 'zenroom';
 const packageJson = require("../package.json");

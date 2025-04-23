@@ -1,4 +1,8 @@
+<!--
+SPDX-FileCopyrightText: 2024-2025 Dyne.org foundation
 
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 
 ### Usage
 This Go package provides an interface to execute Slangroom using an embedded binary. To use this package, include it in your Go project by importing it:

@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024-2025 Dyne.org foundation
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 name: 🧪 & 📣
 on:
   push:
@@ -10,8 +14,16 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  resue:
+    name: 🚨 reuse
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: fsfe/reuse-action@v5
+
   test:
     name: 🧪 Test
+    needs: resue
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
