@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/dyne/slangroom-exec/compare/v1.5.0...v1.6.0) (2025-04-23)
+
+
+### Features
+
+* **release:** create one archive for each platform that contains only slangroom-exec and slexfe ([#32](https://github.com/dyne/slangroom-exec/issues/32)) ([a6f421e](https://github.com/dyne/slangroom-exec/commit/a6f421e9748ffa55e04f9658be17be9b2639e984))
+
 # [1.5.0](https://github.com/dyne/slangroom-exec/compare/v1.4.2...v1.5.0) (2025-04-22)
 
 
