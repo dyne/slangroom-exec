@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/dyne/slangroom-exec/compare/v1.6.0...v1.6.1) (2025-04-23)
+
+
+### Bug Fixes
+
+* correctly escape backslashes in slangroom-exec ASCII logo ([#33](https://github.com/dyne/slangroom-exec/issues/33)) ([3e7a0de](https://github.com/dyne/slangroom-exec/commit/3e7a0de6ab04f11651bf363fbe71299ad38d392d))
+
 # [1.6.0](https://github.com/dyne/slangroom-exec/compare/v1.5.0...v1.6.0) (2025-04-23)
 
 
