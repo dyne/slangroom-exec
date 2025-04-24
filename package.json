@@ -38,7 +38,7 @@
     "@slangroom/zencode": "^1.45.3",
     "pg-hstore": "^2.3.4",
     "type-fest": "^4.40.0",
-    "zenroom": "^5.16.0"
+    "zenroom": "^5.17.0"
   },
   "version": "1.6.1"
 }
