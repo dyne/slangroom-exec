@@ -1,0 +1,50 @@
+# SPDX-FileCopyrightText: 2024-2025 Dyne.org foundation
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+version = 1
+SPDX-PackageName = "slangroom-exec"
+SPDX-PackageSupplier = "Matteo Cristino <matteo@dyne.org>"
+SPDX-PackageDownloadLocation = "https://github.com/dyne/slangroom-exec"
+
+[[annotations]]
+path = ["bun.lockb", ".releaserc", "CHANGELOG.md", "package.json", "src/slexfe", "tsconfig.json"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2024-2025 Dyne.org foundation"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
+
+[[annotations]]
+path = ["test/fixtures/*", "docs/*"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2024-2025 Dyne.org foundation"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
+
+[[annotations]]
+path = ["bindings/go/test/*", "bindings/go/vendor/modules.txt"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2024-2025 Dyne.org foundation"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
+
+[[annotations]]
+path = ["bindings/go/vendor/github.com/davecgh/go-spew/**/*"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2012-2016 Dave Collins <dave@davec.name>"
+SPDX-License-Identifier = "ISC"
+
+[[annotations]]
+path = ["bindings/go/vendor/github.com/pmezard/go-difflib/*", "bindings/go/vendor/github.com/pmezard/go-difflib/**/*"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2013, Patrick Mezard"
+SPDX-License-Identifier = "BSD-3-Clause"
+
+[[annotations]]
+path = ["bindings/go/vendor/github.com/stretchr/testify/**/*"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2012-2020 Mat Ryer, Tyler Bunnell and contributors"
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+path = ["bindings/go/vendor/gopkg.in/yaml.v3/*"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2006-2011 Kirill Simonov"
+SPDX-License-Identifier = "MIT"

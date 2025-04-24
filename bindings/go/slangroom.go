@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024-2025 Dyne.org foundation
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 package slangroom
 
 import (
@@ -25,8 +29,8 @@ type SlangroomInput struct {
 }
 
 type SlangroomChainInput struct {
-	Chain    string
-	Data     string
+	Chain string
+	Data  string
 }
 
 type SlangroomExec struct {
@@ -60,7 +64,7 @@ func PrepareSlangroomExec(args ...string) (SlangroomExec, error) {
 	if err != nil {
 		return SlangroomExec{}, fmt.Errorf("failed to create stdin pipe: %w", err)
 	}
-	return SlangroomExec{ Cmd: execCmd, Stdout: stdout, Stderr: stderr, Stdin: stdin }, nil
+	return SlangroomExec{Cmd: execCmd, Stdout: stdout, Stderr: stderr, Stdin: stdin}, nil
 }
 
 // Exec runs the slangroom-exec command with the provided input.
