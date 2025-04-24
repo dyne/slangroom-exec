@@ -3,19 +3,22 @@
 # This script is used to encode the format of the slangroom-exec command
 # into a string that can be used in the slangroom-exec command
 
+function _out() {     printf "$*\n"; }
+function _err() { >&2 printf "$*\n"; }
+
 print_help() {
-    printf "\033[1mUsage:\033[0m"
-    printf "  $0 [options]\n"
-    printf "\033[1mOptions:\033[0m\n"
-    printf "  -c conf               conf filename to read\n"
-    printf "  -s slangroom-contract slangroom-contract filename to read\n"
-    printf "  -d data               data filename to read\n"
-    printf "  -k keys               keys filename to read\n"
-    printf "  -e extra              extra filename to read\n"
-    printf "  -x context            context filename to read\n"
-    printf "  -F filename           lookup files based on a prefix\n"
-    printf "  -h                    Print this help message\n"
-    printf "\nEncode the parameters into a base64 string.\n"
+    _err "\033[1mUsage:\033[0m"
+    _err "  $0 [options]\n"
+    _err "\033[1mOptions:\033[0m"
+    _err "  -c conf               conf filename to read"
+    _err "  -s slangroom-contract slangroom-contract filename to read"
+    _err "  -d data               data filename to read"
+    _err "  -k keys               keys filename to read"
+    _err "  -e extra              extra filename to read"
+    _err "  -x context            context filename to read"
+    _err "  -F filename           lookup files based on a prefix"
+    _err "  -h                    Print this help message"
+    _err "\nEncode the parameters into a base64 string."
     exit 1
 }
 
@@ -39,12 +42,12 @@ encode_json_base64() {
 # check that jq and getopt are installed
 
 if ! command -v jq &> /dev/null; then
-    printf "jq is not installed. Please install jq to use this script."
+    _err "jq is not installed. Please install jq to use this script."
     exit 1
 fi
 
 if ! command -v getopt &> /dev/null; then
-    printf "getopt is not installed. Please install getopt to use this script."
+    _err "getopt is not installed. Please install getopt to use this script."
     exit 1
 fi
 
@@ -80,10 +83,10 @@ while getopts "c:s:d:k:e:x:F:h" opt; do
         h)
             print_help ;;
         \?)
-            printf "Invalid option: -${OPTARG}" >&2
+            _err "Invalid option: -${OPTARG}" >&2
             exit 1 ;;
         :)
-            printf "Option -${OPTARG} requires an argument." >&2
+            _err "Option -${OPTARG} requires an argument." >&2
             exit 1 ;;
     esac
 done
@@ -96,5 +99,4 @@ if [ -z "$slangroom_contract" ]; then
 fi
 
 # Print the encoded string
-printf "${conf}\n${slangroom_contract}\n${data}\n${keys}\n${extra}\n${context}"
-
+_out "${conf}\n${slangroom_contract}\n${data}\n${keys}\n${extra}\n${context}"

@@ -21,7 +21,6 @@ load_fixture() {
     printf -v slang_input '%s' "$encoded"
 }
 
-
 run_slangroom_exec() {
     bats_require_minimum_version 1.5.0
     run bats_pipe printf "$slang_input" \| ./slangroom-exec
