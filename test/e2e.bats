@@ -62,14 +62,14 @@ setup() {
 }
 
 @test "should show the version and header" {
-		run ./slangroom-exec -v
+    run ./slangroom-exec -v
     assert_output --partial "License AGPL-3.0-or-later: GNU AGPL version 3 <https://www.gnu.org/licenses/agpl-3.0.html>"
-		assert_output --partial "Copyright (C) 2024 undefined"
-		assert_output --partial "slangroom-exec"
-		run ./slangroom-exec --version
+    assert_output --partial "Copyright (C) 2024-2025 Dyne.org foundation"
+    assert_output --partial "slangroom-exec"
+    run ./slangroom-exec --version
     assert_output --partial "License AGPL-3.0-or-later: GNU AGPL version 3 <https://www.gnu.org/licenses/agpl-3.0.html>"
-		assert_output --partial "Copyright (C) 2024 undefined"
-		assert_output --partial "slangroom-exec"
+    assert_output --partial "Copyright (C) 2024-2025 Dyne.org foundation"
+    assert_output --partial "slangroom-exec"
 }
 
 @test "simple chain execution" {
