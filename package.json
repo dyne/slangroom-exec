@@ -1,5 +1,6 @@
 {
   "name": "slangroom-exec",
+	"author": "Dyne.org foundation",
   "module": "index.ts",
   "license": "AGPL-3.0-or-later",
   "type": "module",

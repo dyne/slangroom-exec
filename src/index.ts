@@ -20,7 +20,7 @@ if (argv.includes("-v") || argv.includes("--version")) {
                     (_____|
 `)
 	console.error(`Built for ${process.platform}-${process.arch}
-Copyright (C) 2024 ${packageJson.author}
+Copyright (C) 2024-2025 ${packageJson.author}
 License AGPL-3.0-or-later: GNU AGPL version 3 <https://www.gnu.org/licenses/agpl-3.0.html>
 This is free software: you are free to change and redistribute it
 There is NO WARRANTY, to the extent permitted by law.`);
