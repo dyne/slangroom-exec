@@ -20,6 +20,7 @@
   "dependencies": {
     "@dyne/slangroom-chain": "^1.9.4",
     "@slangroom/core": "^1.45.3",
+    "@slangroom/db": "^1.45.3",
     "@slangroom/deps": "^1.45.3",
     "@slangroom/ethereum": "^1.45.3",
     "@slangroom/fs": "^1.45.3",
@@ -37,7 +38,6 @@
     "@slangroom/wallet": "^1.45.3",
     "@slangroom/zencode": "^1.45.3",
     "pg-hstore": "^2.3.4",
-    "type-fest": "^4.40.0",
     "zenroom": "^5.17.0"
   },
   "version": "1.6.4"
