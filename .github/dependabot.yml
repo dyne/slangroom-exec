@@ -16,6 +16,7 @@ updates:
     allow:
       - dependency-name: "@slangroom/*"
       - dependency-name: "zenroom"
+      - dependency-name: "@dyne/slangroom-chain"
     groups:
       slangroom-packages:
         patterns:
