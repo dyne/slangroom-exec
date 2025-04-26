@@ -9,9 +9,15 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm" # See documentation for possible values
+  - package-ecosystem: "bun" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
     allow:
       - dependency-name: "@slangroom/*"
+      - dependency-name: "zenroom"
+      - dependency-name: "@dyne/slangroom-chain"
+    groups:
+      slangroom-packages:
+        patterns:
+          - "@slangroom/*"
