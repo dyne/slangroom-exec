@@ -8,7 +8,7 @@ SPDX-PackageSupplier = "Matteo Cristino <matteo@dyne.org>"
 SPDX-PackageDownloadLocation = "https://github.com/dyne/slangroom-exec"
 
 [[annotations]]
-path = ["bun.lockb", ".releaserc", "CHANGELOG.md", "package.json", "src/slexfe", "tsconfig.json"]
+path = ["bun.lock", ".releaserc", "CHANGELOG.md", "package.json", "src/slexfe", "tsconfig.json"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2024-2025 Dyne.org foundation"
 SPDX-License-Identifier = "AGPL-3.0-or-later"
