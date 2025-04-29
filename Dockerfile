@@ -7,7 +7,7 @@ FROM dyne/devuan:excalibur
 COPY src/slexfe /usr/local/bin/
 COPY Makefile Makefile
 COPY src ./src
-COPY bun.lockb bun.lockb
+COPY bun.lock bun.lock
 COPY .tool-versions .tool-versions
 COPY package.json package.json
 COPY tsconfig.json tsconfig.json
