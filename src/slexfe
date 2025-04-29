@@ -20,7 +20,14 @@ print_help() {
     _err "  -x context            context filename to read"
     _err "  -F filename           lookup files based on a prefix"
     _err "  -v                    Show version compatibility"
-    _err "  -h                    Print this help message"
+    _err "  -h                    Print this help message\n"
+    _err "\033[1mExamples:\033[0m"
+    _err "  \033[3mslexfe < contract.slang\033[0m"
+    _err "        Get a slangroom contract from stdin and produce the slangroom-exec format encode by leaving the lines for the other files empty."
+    _err "  \033[3mslexfe -c conf.conf -s contract.slang -d data.json -k keys.json -e extra.json -x context\033[0m"
+    _err "        Get the slangroom contract and its inputs file path and produce the slangroom-exec format encode."
+    _err "  \033[3mslexfe -F path/to/filename\033[0m"
+    _err "        Equal to do slexfe -c path/to/filename.conf -s path/to/filename.slang -d path/to/filename.data.json -k path/to/filename.keys.json -e path/to/filename.extra.json -x path/to/filename.context"
     exit 1
 }
 
