@@ -6,10 +6,9 @@
 function _out() {     printf "$*\n"; }
 function _err() { >&2 printf "$*\n"; }
 
-_err "SLangroom-EXec Format Encoder"
-_err "Encode the parameters into a base64 string for zencode-exec and slangroom-exec.\n"
-
 print_help() {
+    _err "SLangroom-EXec Format Encoder"
+    _err "Encode the parameters into a base64 string for zencode-exec and slangroom-exec.\n"
     _err "\033[1mUsage:\033[0m"
     _err "  $0 [options]\n"
     _err "\033[1mOptions:\033[0m"
@@ -56,8 +55,8 @@ fi
 
 # catch use of long flags
 if [[ "$1" == --* ]]; then
-    _err "\033[1mInvalid option\033[0m: long options like '$1' are not supported.\n" >&2
-    print_help
+    _err "\033[1mInvalid option\033[0m: long options like '$1' are not supported.\n"
+    _err "Please use -h for help."
     exit 1
 fi
 
@@ -96,11 +95,12 @@ while getopts ":c:s:d:k:e:x:F:hv" opt; do
         h)
             print_help ;;
         \?)
-            _err "\033[1mInvalid option\033[0m: -${OPTARG}\n" >&2
-            print_help
+            _err "\033[1mInvalid option\033[0m: -${OPTARG}\n"
+            _err "Please use -h for help."
             exit 1 ;;
         :)
-            _err "Option -${OPTARG} requires an argument." >&2
+            _err "Option -${OPTARG} requires an argument.\n"
+            _err "Please use -h for help."
             exit 1 ;;
     esac
 done
