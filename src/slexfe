@@ -6,6 +6,9 @@
 function _out() {     printf "$*\n"; }
 function _err() { >&2 printf "$*\n"; }
 
+_err "SLangroom-EXec Format Encoder"
+_err "Encode the parameters into a base64 string for zencode-exec and slangroom-exec.\n"
+
 print_help() {
     _err "\033[1mUsage:\033[0m"
     _err "  $0 [options]\n"
@@ -17,8 +20,8 @@ print_help() {
     _err "  -e extra              extra filename to read"
     _err "  -x context            context filename to read"
     _err "  -F filename           lookup files based on a prefix"
+    _err "  -v                    Show version compatibility"
     _err "  -h                    Print this help message"
-    _err "\nEncode the parameters into a base64 string."
     exit 1
 }
 
@@ -53,7 +56,7 @@ fi
 
 # catch use of long flags
 if [[ "$1" == --* ]]; then
-    _err "Long options like '$1' are not supported.\n" >&2
+    _err "\033[1mInvalid option\033[0m: long options like '$1' are not supported.\n" >&2
     print_help
     exit 1
 fi
@@ -66,7 +69,7 @@ keys=""
 extra=""
 context=""
 
-while getopts ":c:s:d:k:e:x:F:h" opt; do
+while getopts ":c:s:d:k:e:x:F:hv" opt; do
     case ${opt} in
         c)
             conf=$(encode_base64 "${OPTARG}");;
@@ -87,6 +90,9 @@ while getopts ":c:s:d:k:e:x:F:h" opt; do
             keys=$(encode_json_base64 "${OPTARG}.keys.json")
             extra=$(encode_json_base64 "${OPTARG}.extra.json")
             context=$(encode_base64 "${OPTARG}.context");;
+        v)
+            _err "slexfe compatible with zencode_exec@^5.0.0 and slangroom_exec@^1.0.0"
+            exit 0 ;;
         h)
             print_help ;;
         \?)
