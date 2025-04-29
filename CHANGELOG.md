@@ -1,3 +1,10 @@
+## [1.6.4](https://github.com/dyne/slangroom-exec/compare/v1.6.3...v1.6.4) (2025-04-29)
+
+
+### Bug Fixes
+
+* **Dockerfile:** use bun text lockfile ([#42](https://github.com/dyne/slangroom-exec/issues/42)) ([82b9b3d](https://github.com/dyne/slangroom-exec/commit/82b9b3de232afcc48aa22bb464e81a20baf0819f))
+
 ## [1.6.3](https://github.com/dyne/slangroom-exec/compare/v1.6.2...v1.6.3) (2025-04-28)
 
 ## [1.6.2](https://github.com/dyne/slangroom-exec/compare/v1.6.1...v1.6.2) (2025-04-24)
