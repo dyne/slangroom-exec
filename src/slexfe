@@ -7,6 +7,8 @@ function _out() {     printf "$*\n"; }
 function _err() { >&2 printf "$*\n"; }
 
 print_help() {
+    _err "SLangroom-EXec Format Encoder"
+    _err "Encode the parameters into a base64 string for zencode-exec and slangroom-exec.\n"
     _err "\033[1mUsage:\033[0m"
     _err "  $0 [options]\n"
     _err "\033[1mOptions:\033[0m"
@@ -17,8 +19,15 @@ print_help() {
     _err "  -e extra              extra filename to read"
     _err "  -x context            context filename to read"
     _err "  -F filename           lookup files based on a prefix"
-    _err "  -h                    Print this help message"
-    _err "\nEncode the parameters into a base64 string."
+    _err "  -v                    Show version compatibility"
+    _err "  -h                    Print this help message\n"
+    _err "\033[1mExamples:\033[0m"
+    _err "  \033[3mslexfe < contract.slang\033[0m"
+    _err "        Get a slangroom contract from stdin and produce the slangroom-exec format encode by leaving the lines for the other files empty."
+    _err "  \033[3mslexfe -c conf.conf -s contract.slang -d data.json -k keys.json -e extra.json -x context\033[0m"
+    _err "        Get the slangroom contract and its inputs file path and produce the slangroom-exec format encode."
+    _err "  \033[3mslexfe -F path/to/filename\033[0m"
+    _err "        Equal to do slexfe -c path/to/filename.conf -s path/to/filename.slang -d path/to/filename.data.json -k path/to/filename.keys.json -e path/to/filename.extra.json -x path/to/filename.context"
     exit 1
 }
 
@@ -51,6 +60,13 @@ if ! command -v getopt &> /dev/null; then
     exit 1
 fi
 
+# catch use of long flags
+if [[ "$1" == --* ]]; then
+    _err "\033[1mInvalid option\033[0m: long options like '$1' are not supported.\n"
+    _err "Please use -h for help."
+    exit 1
+fi
+
 # Default values for options
 conf=""
 slangroom_contract=""
@@ -59,7 +75,7 @@ keys=""
 extra=""
 context=""
 
-while getopts "c:s:d:k:e:x:F:h" opt; do
+while getopts ":c:s:d:k:e:x:F:hv" opt; do
     case ${opt} in
         c)
             conf=$(encode_base64 "${OPTARG}");;
@@ -80,13 +96,18 @@ while getopts "c:s:d:k:e:x:F:h" opt; do
             keys=$(encode_json_base64 "${OPTARG}.keys.json")
             extra=$(encode_json_base64 "${OPTARG}.extra.json")
             context=$(encode_base64 "${OPTARG}.context");;
+        v)
+            _err "slexfe compatible with zencode_exec@^5.0.0 and slangroom_exec@^1.0.0"
+            exit 0 ;;
         h)
             print_help ;;
         \?)
-            _err "Invalid option: -${OPTARG}" >&2
+            _err "\033[1mInvalid option\033[0m: -${OPTARG}\n"
+            _err "Please use -h for help."
             exit 1 ;;
         :)
-            _err "Option -${OPTARG} requires an argument." >&2
+            _err "Option -${OPTARG} requires an argument.\n"
+            _err "Please use -h for help."
             exit 1 ;;
     esac
 done
