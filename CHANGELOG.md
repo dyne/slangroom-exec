@@ -1,3 +1,10 @@
+## [1.6.5](https://github.com/dyne/slangroom-exec/compare/v1.6.4...v1.6.5) (2025-04-29)
+
+
+### Bug Fixes
+
+* **slexfe:** improve error reporting, add header, version compatibility and examples ([#44](https://github.com/dyne/slangroom-exec/issues/44)) ([b960c84](https://github.com/dyne/slangroom-exec/commit/b960c84173a3be89a167e36e8b2aed2febd152ae))
+
 ## [1.6.4](https://github.com/dyne/slangroom-exec/compare/v1.6.3...v1.6.4) (2025-04-29)
 
 
