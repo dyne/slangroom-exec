@@ -21,8 +21,7 @@ import { zencode } from "@slangroom/zencode";
 import { execute } from "@dyne/slangroom-chain";
 
 import type { ZenParams } from "@slangroom/shared";
-import type { StringKeyOf } from "type-fest";
-type ZenParamKey = StringKeyOf<ZenParams>;
+type ZenParamKey = Extract<keyof ZenParams, string>;
 
 export const decode = (r: string) => Buffer.from(r, "base64").toString();
 export const decode_and_trim = (r: string) => decode(r).trim();
