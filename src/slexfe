@@ -51,6 +51,12 @@ if ! command -v getopt &> /dev/null; then
     exit 1
 fi
 
+# catch use of long flags
+if [[ "$1" == --* ]]; then
+    _err "Long options like '$1' are not supported.\nUse -h to see the help message." >&2
+    exit 1
+fi
+
 # Default values for options
 conf=""
 slangroom_contract=""
@@ -59,7 +65,7 @@ keys=""
 extra=""
 context=""
 
-while getopts "c:s:d:k:e:x:F:h" opt; do
+while getopts ":c:s:d:k:e:x:F:h" opt; do
     case ${opt} in
         c)
             conf=$(encode_base64 "${OPTARG}");;
@@ -83,7 +89,8 @@ while getopts "c:s:d:k:e:x:F:h" opt; do
         h)
             print_help ;;
         \?)
-            _err "Invalid option: -${OPTARG}" >&2
+            _err "\033[1mInvalid option\033[0m: -${OPTARG}\n" >&2
+			print_help
             exit 1 ;;
         :)
             _err "Option -${OPTARG} requires an argument." >&2
