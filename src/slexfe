@@ -31,6 +31,13 @@ print_help() {
     exit 1
 }
 
+strict_check() {
+    if [[ ! -f "$1" ]]; then
+        _err "File not found: $1"
+        exit 1
+    fi
+}
+
 # Function to encode to base64
 encode_base64() {
     if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -78,17 +85,23 @@ context=""
 while getopts ":c:s:d:k:e:x:F:hv" opt; do
     case ${opt} in
         c)
-            conf=$(encode_base64 "${OPTARG}");;
+            strict_check "${OPTARG}"
+            conf=$(encode_base64 "${OPTARG}" "strict");;
         s)
-            slangroom_contract=$(encode_base64 "${OPTARG}");;
+            strict_check "${OPTARG}"
+            slangroom_contract=$(encode_base64 "${OPTARG}" "strict");;
         d)
-            data=$(encode_json_base64 "${OPTARG}");;
+            strict_check "${OPTARG}"
+            data=$(encode_json_base64 "${OPTARG}" "strict");;
         k)
-            keys=$(encode_json_base64 "${OPTARG}");;
+            strict_check "${OPTARG}"
+            keys=$(encode_json_base64 "${OPTARG}" "strict");;
         e)
-            extra=$(encode_json_base64 "${OPTARG}");;
+            strict_check "${OPTARG}"
+            extra=$(encode_json_base64 "${OPTARG}" "strict");;
         x)
-            context=$(encode_base64 "${OPTARG}");;
+            strict_check "${OPTARG}"
+            context=$(encode_base64 "${OPTARG}" "strict");;
         F)
             conf=$(encode_base64 "${OPTARG}.conf")
             slangroom_contract=$(encode_base64 "${OPTARG}.slang")
