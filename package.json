@@ -40,5 +40,5 @@
     "pg-hstore": "^2.3.4",
     "zenroom": "^5.17.0"
   },
-  "version": "1.6.7"
+  "version": "1.6.8"
 }
