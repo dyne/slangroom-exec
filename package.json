@@ -38,7 +38,7 @@
     "@slangroom/wallet": "^1.46.1",
     "@slangroom/zencode": "^1.46.1",
     "pg-hstore": "^2.3.4",
-    "zenroom": "^5.17.0"
+    "zenroom": "^5.19.0"
   },
   "version": "1.6.8"
 }
