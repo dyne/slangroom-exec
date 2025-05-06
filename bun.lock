@@ -22,7 +22,6 @@
         "@slangroom/timestamp": "^1.46.1",
         "@slangroom/wallet": "^1.46.1",
         "@slangroom/zencode": "^1.46.1",
-        "pg-hstore": "^2.3.4",
         "zenroom": "^5.19.0",
       },
       "devDependencies": {
