@@ -3,7 +3,7 @@
   "workspaces": {
     "": {
       "dependencies": {
-        "@dyne/slangroom-chain": "^1.9.10",
+        "@dyne/slangroom-chain": "^1.9.11",
         "@slangroom/core": "^1.46.1",
         "@slangroom/db": "^1.46.1",
         "@slangroom/deps": "^1.46.1",
@@ -64,7 +64,7 @@
 
     "@digitalbazaar/http-client": ["@digitalbazaar/http-client@3.4.1", "", { "dependencies": { "ky": "^0.33.3", "ky-universal": "^0.11.0", "undici": "^5.21.2" } }, "sha512-Ahk1N+s7urkgj7WvvUND5f8GiWEPfUw0D41hdElaqLgu8wZScI8gdI0q+qWw5N1d35x7GCRH2uk9mi+Uzo9M3g=="],
 
-    "@dyne/slangroom-chain": ["@dyne/slangroom-chain@1.9.10", "", { "dependencies": { "@slangroom/core": "^1.45.3", "@slangroom/db": "^1.45.3", "@slangroom/ethereum": "^1.45.3", "@slangroom/fs": "^1.45.3", "@slangroom/git": "^1.45.3", "@slangroom/helpers": "^1.45.3", "@slangroom/http": "^1.45.3", "@slangroom/json-schema": "^1.45.3", "@slangroom/oauth": "^1.45.3", "@slangroom/pocketbase": "^1.45.3", "@slangroom/qrcode": "^1.45.3", "@slangroom/rdf": "^1.45.3", "@slangroom/redis": "^1.45.3", "@slangroom/shell": "^1.45.3", "@slangroom/timestamp": "^1.45.3", "@slangroom/wallet": "^1.45.3", "@slangroom/zencode": "^1.45.3", "execa": "^9.5.2", "yaml": "^2.7.1" } }, "sha512-iFYUIWJEUPxH3TRuXvOPqSPHc894M6gqdXzZ4cgyZDog+D6/Puit3wCSCpptaSYNH8YlO1tkd1kLpkEUwWoGgA=="],
+    "@dyne/slangroom-chain": ["@dyne/slangroom-chain@1.9.11", "", { "dependencies": { "@slangroom/core": "^1.45.3", "@slangroom/db": "^1.45.3", "@slangroom/ethereum": "^1.45.3", "@slangroom/fs": "^1.45.3", "@slangroom/git": "^1.45.3", "@slangroom/helpers": "^1.45.3", "@slangroom/http": "^1.45.3", "@slangroom/json-schema": "^1.45.3", "@slangroom/oauth": "^1.45.3", "@slangroom/pocketbase": "^1.45.3", "@slangroom/qrcode": "^1.45.3", "@slangroom/rdf": "^1.45.3", "@slangroom/redis": "^1.45.3", "@slangroom/shell": "^1.45.3", "@slangroom/timestamp": "^1.45.3", "@slangroom/wallet": "^1.45.3", "@slangroom/zencode": "^1.45.3", "execa": "^9.5.2", "yaml": "^2.7.1" } }, "sha512-Wi5UTwefwSfpeM2TsaQAEJqQUKyU0fq/4SAWBEQDnILWDAWgX33uMnrk86kAjuudp75+/pfaTMuKv2lQiKNKzg=="],
 
     "@ethereumjs/rlp": ["@ethereumjs/rlp@4.0.1", "", { "bin": { "rlp": "bin/rlp" } }, "sha512-tqsQiBQDQdmPWE1xkkBq4rlSW5QZpLOUJ5RJh2/9fug+q9tnUhuZoVLk7s0scUIKTOzEtR72DFBXI4WiZcMpvw=="],
 
