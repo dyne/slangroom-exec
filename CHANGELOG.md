@@ -1,3 +1,10 @@
+## [1.6.20](https://github.com/dyne/slangroom-exec/compare/v1.6.19...v1.6.20) (2025-06-05)
+
+
+### Bug Fixes
+
+* **go:** order of inputs ([#63](https://github.com/dyne/slangroom-exec/issues/63)) ([b6ddf85](https://github.com/dyne/slangroom-exec/commit/b6ddf8516273a790c85aca58bef149bff04179ec))
+
 ## [1.6.19](https://github.com/dyne/slangroom-exec/compare/v1.6.18...v1.6.19) (2025-05-29)
 
 ## [1.6.18](https://github.com/dyne/slangroom-exec/compare/v1.6.17...v1.6.18) (2025-05-29)
