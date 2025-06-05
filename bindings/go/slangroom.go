@@ -76,8 +76,8 @@ func Exec(input SlangroomInput) (SlangResult, error) {
 
 	// Encode inputs and send them to stdin
 	inputs := []string{
-		input.Conf, input.Contract, input.Keys,
-		input.Data, input.Extra, input.Context,
+		input.Conf, input.Contract, input.Data,
+		input.Keys, input.Extra, input.Context,
 	}
 	for _, data := range inputs {
 		encoded := base64.StdEncoding.EncodeToString([]byte(data))
