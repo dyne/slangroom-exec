@@ -1,3 +1,5 @@
+## [1.6.21](https://github.com/dyne/slangroom-exec/compare/v1.6.20...v1.6.21) (2025-06-06)
+
 ## [1.6.20](https://github.com/dyne/slangroom-exec/compare/v1.6.19...v1.6.20) (2025-06-05)
 
 
