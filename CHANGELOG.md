@@ -1,3 +1,10 @@
+## [1.6.24](https://github.com/dyne/slangroom-exec/compare/v1.6.23...v1.6.24) (2025-06-21)
+
+
+### Bug Fixes
+
+* update dependencies ([#73](https://github.com/dyne/slangroom-exec/issues/73)) ([fae0a93](https://github.com/dyne/slangroom-exec/commit/fae0a9370a93307c6e75d7c7a4508df70161d6ae))
+
 ## [1.6.23](https://github.com/dyne/slangroom-exec/compare/v1.6.22...v1.6.23) (2025-06-19)
 
 ## [1.6.22](https://github.com/dyne/slangroom-exec/compare/v1.6.21...v1.6.22) (2025-06-12)
