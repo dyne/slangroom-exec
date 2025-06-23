@@ -22,7 +22,7 @@
         "@slangroom/timestamp": "^1.48.5",
         "@slangroom/wallet": "^1.48.5",
         "@slangroom/zencode": "^1.48.5",
-        "zenroom": "^5.21.1",
+        "zenroom": "^5.21.2",
       },
       "devDependencies": {
         "@semantic-release/changelog": "^6.0.3",
@@ -1360,7 +1360,7 @@
 
     "yoctocolors": ["yoctocolors@2.0.2", "", {}, "sha512-Ct97huExsu7cWeEjmrXlofevF8CvzUglJ4iGUet5B8xn1oumtAZBpHU4GzYuoE6PVqcZ5hghtBrSlhwHuR1Jmw=="],
 
-    "zenroom": ["zenroom@5.21.1", "", {}, "sha512-UAE84iQpP8HDhWGz8fiH8JugrMo9F0ciLEJdvSOnkUUvbi4OO7PXPO7JJxnaXkD2teliGXw4cDj5Ce3a++4JPA=="],
+    "zenroom": ["zenroom@5.21.2", "", {}, "sha512-sMFTD73gw2WCygsj09+PgN4LxeczfYXrCHzmSU3xEwP3zm5dx0vtj6Hc29HxldaRoLwUtBJvQmxo6jK9n37aPw=="],
 
     "zod": ["zod@3.24.2", "", {}, "sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ=="],
 
