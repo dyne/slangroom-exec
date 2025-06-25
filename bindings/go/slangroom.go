@@ -42,7 +42,7 @@ type SlangroomExec struct {
 
 func PrepareSlangroomExec(args ...string) (SlangroomExec, error) {
 	if _, err := exec.LookPath("slangroom-exec"); err != nil {
-		log.Println("slangroom-exec command not found")
+		log.Println("slangroom-exec command not found: %v\n", err)
 		return SlangroomExec{}, fmt.Errorf(
 			"slangroom-exec command not found. Please install it by running:\n\n" +
 				"wget https://github.com/dyne/slangroom-exec/releases/latest/download/slangroom-exec-$(uname)-$(uname -m) \\\n" +
