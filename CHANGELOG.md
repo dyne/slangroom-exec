@@ -1,3 +1,11 @@
+## [1.6.25](https://github.com/dyne/slangroom-exec/compare/v1.6.24...v1.6.25) (2025-06-25)
+
+
+### Bug Fixes
+
+* **go:** use printf ([196ba5d](https://github.com/dyne/slangroom-exec/commit/196ba5d6db84a89a2546d9843c439eca80f18120))
+* show real error on slangroom-exec not found ([#79](https://github.com/dyne/slangroom-exec/issues/79)) ([1aafcbf](https://github.com/dyne/slangroom-exec/commit/1aafcbf2b52395e35123d265ddaabc1b3925e78f))
+
 ## [1.6.24](https://github.com/dyne/slangroom-exec/compare/v1.6.23...v1.6.24) (2025-06-21)
 
 
