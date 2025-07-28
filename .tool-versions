@@ -1,7 +1,6 @@
 # SPDX-FileCopyrightText: 2024-2025 Dyne.org foundation
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
-
-bun  1.1.40
+bun 1.2.19
 golang 1.24
-nodejs 22
+nodejs 24

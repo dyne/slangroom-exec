@@ -4,25 +4,25 @@
     "": {
       "dependencies": {
         "@dyne/slangroom-chain": "^1.9.19",
-        "@slangroom/core": "^1.48.5",
-        "@slangroom/db": "^1.48.5",
-        "@slangroom/deps": "^1.48.5",
-        "@slangroom/ethereum": "^1.48.5",
-        "@slangroom/fs": "^1.48.5",
-        "@slangroom/git": "^1.48.5",
-        "@slangroom/helpers": "^1.48.5",
-        "@slangroom/http": "^1.48.5",
-        "@slangroom/json-schema": "^1.48.5",
-        "@slangroom/oauth": "^1.48.5",
-        "@slangroom/pocketbase": "^1.48.5",
-        "@slangroom/qrcode": "^1.48.5",
-        "@slangroom/rdf": "^1.48.5",
-        "@slangroom/redis": "^1.48.5",
-        "@slangroom/shell": "^1.48.5",
-        "@slangroom/timestamp": "^1.48.5",
-        "@slangroom/wallet": "^1.48.5",
-        "@slangroom/zencode": "^1.48.5",
-        "zenroom": "^5.21.1",
+        "@slangroom/core": "^1.48.10",
+        "@slangroom/db": "^1.48.10",
+        "@slangroom/deps": "^1.48.10",
+        "@slangroom/ethereum": "^1.48.10",
+        "@slangroom/fs": "^1.48.10",
+        "@slangroom/git": "^1.48.10",
+        "@slangroom/helpers": "^1.48.10",
+        "@slangroom/http": "^1.48.10",
+        "@slangroom/json-schema": "^1.48.10",
+        "@slangroom/oauth": "^1.48.10",
+        "@slangroom/pocketbase": "^1.48.10",
+        "@slangroom/qrcode": "^1.48.10",
+        "@slangroom/rdf": "^1.48.10",
+        "@slangroom/redis": "^1.48.10",
+        "@slangroom/shell": "^1.48.10",
+        "@slangroom/timestamp": "^1.48.10",
+        "@slangroom/wallet": "^1.48.10",
+        "@slangroom/zencode": "^1.48.10",
+        "zenroom": "^5.24.10",
       },
       "devDependencies": {
         "@semantic-release/changelog": "^6.0.3",
@@ -198,45 +198,45 @@
 
     "@sindresorhus/merge-streams": ["@sindresorhus/merge-streams@4.0.0", "", {}, "sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ=="],
 
-    "@slangroom/core": ["@slangroom/core@1.48.5", "", { "dependencies": { "@slangroom/deps": "1.48.5", "@slangroom/ignored": "1.48.5", "@slangroom/shared": "1.48.5", "fastest-levenshtein": "^1.0.16" } }, "sha512-QlpNGwGANTcvIT39IMet5VC7lSsylKbIZ3Jcgx9KcI4TsQNMD23jVcFozj2ZYafyT/+54qld5wp/6iWKSMlJyA=="],
+    "@slangroom/core": ["@slangroom/core@1.48.10", "", { "dependencies": { "@slangroom/deps": "1.48.10", "@slangroom/ignored": "1.48.10", "@slangroom/shared": "1.48.10", "fastest-levenshtein": "^1.0.16" } }, "sha512-eJByKj2NPnohBY/G0jc9kk8b7SREkngpCgfWAHOWes2tPyTa4rx6Kd8Y3qaJulKgluGuBPWZz6NlmJG6m35N0g=="],
 
-    "@slangroom/db": ["@slangroom/db@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5", "pg-hstore": "^2.3.4", "sequelize": "^6.16.0", "sqlite3": "^5.0.0" } }, "sha512-v9Xoy2CA3iHCd5WEOTYTrZmik1L34AY2R5YfnK/0zqtbQ4Knevn1UK++JPfNlQ8M1PCWmPplUereLAum2145TA=="],
+    "@slangroom/db": ["@slangroom/db@1.48.10", "", { "dependencies": { "@slangroom/core": "1.48.10", "@slangroom/shared": "1.48.10", "pg-hstore": "^2.3.4", "sequelize": "^6.16.0", "sqlite3": "^5.0.0" } }, "sha512-wBcBnJlc1ULvtEsVu87UcDbf1U+qX36uuLs9CsqSfIA5Wk6y/N7sBUJ5yJvOvbaYuptCTYVIhaUzTAwry9suYw=="],
 
-    "@slangroom/deps": ["@slangroom/deps@1.48.5", "", { "dependencies": { "chalk": "^5.3.0", "chevrotain": "^10.5.0" }, "peerDependencies": { "zenroom": "^5.0.0" } }, "sha512-0TduTVL9DHP+Kc2KgNPK7ZIIZZOKbK7Y8/vZCqNNq3Z2ywz2XJDRfRsAWoD8wTSsBp6mGXs/UKZxtr7UgTIayA=="],
+    "@slangroom/deps": ["@slangroom/deps@1.48.10", "", { "dependencies": { "chalk": "^5.3.0", "chevrotain": "^10.5.0" }, "peerDependencies": { "zenroom": "^5.0.0" } }, "sha512-kgGzHRzN96KkQKXXMOO1tFf99nnXqzXdL7T65QNggXP6YajcFuA56/a0jP4KUNqcvQL+5VROa1o70ZBgjKuyjA=="],
 
-    "@slangroom/ethereum": ["@slangroom/ethereum@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5", "web3": "^4.3.0", "web3-validator": "^2.0.3" } }, "sha512-UQLKeghNqTbofW+qwoAlNYV/WTO1VJMESABbg9Fh77DUohigCMZQhJDaR0oHSK37W+z0F/tPosvfed0QUnRdew=="],
+    "@slangroom/ethereum": ["@slangroom/ethereum@1.48.10", "", { "dependencies": { "@slangroom/core": "1.48.10", "@slangroom/shared": "1.48.10", "web3": "^4.3.0", "web3-validator": "^2.0.3" } }, "sha512-tfjU19ZI/Cv+AAiQJatToqNIlFJlo+tAHMl46l3ot4y81uGP2hDQ3RvGb9VyKlYyn0t23FElo1zBG7M5KiJn8Q=="],
 
-    "@slangroom/fs": ["@slangroom/fs@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5", "fflate": "^0.8.2" } }, "sha512-XERRkh+Z6JgqN5PX8kFVegGEjq3a0qPJ8vuIW46/Dq2FTLb7uOTScfbY64y1uQ3437pvekDxQpDYmxHqtRek1A=="],
+    "@slangroom/fs": ["@slangroom/fs@1.48.10", "", { "dependencies": { "@slangroom/core": "1.48.10", "@slangroom/shared": "1.48.10", "fflate": "^0.8.2" } }, "sha512-vBmbyfA9fY6D/CU/zbFP5T83ODyYznxdMDUVxyqEnXfY7PBJ+dRMKKMWIBucbOShuh4SQ5D/U3txD3ufY1Q1TQ=="],
 
-    "@slangroom/git": ["@slangroom/git@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "isomorphic-git": "^1.25.10" } }, "sha512-LZx95/V7Mk0u0E7soXuRJjpZ4w8VZhewcQZY3K3t2hJATZ+HJjoE7G5IokBk5U+jNtVMp8sr2vsP5pfbNBq8gw=="],
+    "@slangroom/git": ["@slangroom/git@1.48.10", "", { "dependencies": { "@slangroom/core": "1.48.10", "isomorphic-git": "^1.25.10" } }, "sha512-iLsC/sQomcxub1hNpZnI0txifDeqb4D5+St5ENARG+n4a2JJqbDF8PUhoVki7EG1EY/8bfCtEnvsJcnAKQ661g=="],
 
-    "@slangroom/helpers": ["@slangroom/helpers@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5", "@types/lodash": "^4.14.202", "lodash": "^4.17.21" } }, "sha512-Ft+9aBgy4goBLjY2y3to48/aoh7g2uIDBklGScdI1ZN8KahbJRzZTqE9wI30D8eJyetOqQ1D9jpfA4KEMt/GIg=="],
+    "@slangroom/helpers": ["@slangroom/helpers@1.48.10", "", { "dependencies": { "@slangroom/core": "1.48.10", "@slangroom/shared": "1.48.10", "@types/lodash": "^4.14.202", "lodash": "^4.17.21" } }, "sha512-pNZjiI7AZ/+Y2U1UgR/YS7K6l/3P7d744+GgXOoXpJDGGFEEuaB2mm5D49ow/siKcqkHUQ1FmyC/SO0840+Zsg=="],
 
-    "@slangroom/http": ["@slangroom/http@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5", "axios": "^1.6.2" } }, "sha512-sJHg9HYU7Fz2Q0lW19HmcRPtXzr7On2Q6W0FbDMcdUXHktBLNsCgUpVDmBer68cIoGKHyfi5p7L43bLL95a0rw=="],
+    "@slangroom/http": ["@slangroom/http@1.48.10", "", { "dependencies": { "@slangroom/core": "1.48.10", "@slangroom/shared": "1.48.10", "axios": "^1.6.2" } }, "sha512-mE8TJT0iNzZMIbksRnlM9kWVZ5qLizYP/9M50LNQrFnrQvrURmvqejM4ObnlYhKP2Iv8rlfYfbzyaepY5cBujQ=="],
 
-    "@slangroom/ignored": ["@slangroom/ignored@1.48.5", "", { "dependencies": { "@slangroom/deps": "1.48.5", "@slangroom/shared": "1.48.5" } }, "sha512-FfL0fpE8ZueuVZta2reXq6q63Jxm6piZoZTHOrt2bVWWWOqEBIC+ehz4dPZxXFL6lnjdl3ij7+gcW3irC0anDA=="],
+    "@slangroom/ignored": ["@slangroom/ignored@1.48.10", "", { "dependencies": { "@slangroom/deps": "1.48.10", "@slangroom/shared": "1.48.10" } }, "sha512-jel94KQZoUquMdFvQo7cpslWOYxpZpJLf/5Z3NrGFpx/dh+OPKlBIv8Vc+qrHTKZ6MoA2wWguG0pZ45B2wHKhQ=="],
 
-    "@slangroom/json-schema": ["@slangroom/json-schema@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5", "ajv": "^8.13.0" } }, "sha512-gPVTZ/hiocSl5Ws4+Pzy1lW1h0yXyrHY2WIy3/xzvJFXVpSN1Fyx5cTRLB5Fqy9jRQk2KhpBNelkhdE4gy9gtw=="],
+    "@slangroom/json-schema": ["@slangroom/json-schema@1.48.10", "", { "dependencies": { "@slangroom/core": "1.48.10", "@slangroom/shared": "1.48.10", "ajv": "^8.13.0" } }, "sha512-kqYlRSyjbeH765DhAPudHJGazlFc/x7QoCkyUhfdUSxxu9JgIVylv6BFD0digGTfasRqiS+A/ozDYSGrogOuRQ=="],
 
-    "@slangroom/oauth": ["@slangroom/oauth@1.48.5", "", { "dependencies": { "@node-oauth/oauth2-server": "^5.1.0", "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5", "bs58": "^5.0.0", "jose": "^5.1.3" } }, "sha512-atJ2SzCLnEe21NjYw5jjryQynob8ZbUFtBOVSVukYQUkR5WJH8kS4TAmtVpP9DzkN+/kpK4nrR/rZdGpFK1U3w=="],
+    "@slangroom/oauth": ["@slangroom/oauth@1.48.10", "", { "dependencies": { "@node-oauth/oauth2-server": "^5.1.0", "@slangroom/core": "1.48.10", "@slangroom/shared": "1.48.10", "bs58": "^5.0.0", "jose": "^5.1.3" } }, "sha512-b3rDSTBxplCHPdI3dwqqOb0kqka5g/a1Pa5dhqdav/XLCAulyZjE2XakSIBjstbZiaRVE0NFMvfbq34OUnmffw=="],
 
-    "@slangroom/pocketbase": ["@slangroom/pocketbase@1.48.5", "", { "dependencies": { "@capacitor/preferences": "^6.0.3", "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5", "pocketbase": "^0.25.1", "zod": "^3.24.1" } }, "sha512-T0zCKQe5OhdY9xNkqJhSSsQPFM4igyWa0nN9Pc8iwqIloufhcHPygZo56nOj5HgIM74jqgmgBTLqOzUbzst8CA=="],
+    "@slangroom/pocketbase": ["@slangroom/pocketbase@1.48.10", "", { "dependencies": { "@capacitor/preferences": "^6.0.3", "@slangroom/core": "1.48.10", "@slangroom/shared": "1.48.10", "pocketbase": "^0.25.1", "zod": "^3.24.1" } }, "sha512-oFTBAPES1PHB69mLlspArorL/fyr+3ZvsRZwrQHQ18T4CpJ/g90i/0cDdh1C49uUGpaA41+llSWcE1FRz6TOGw=="],
 
-    "@slangroom/qrcode": ["@slangroom/qrcode@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "qrcode": "^1.5.3" } }, "sha512-ecjyMjlr8+1wDRnmuY96f9g/3bSmfm0yWZOIY4tmZV4qtbEa1Rd40fgmkY2x2NJ53JT54wj1DRlhii+J0HsH5g=="],
+    "@slangroom/qrcode": ["@slangroom/qrcode@1.48.10", "", { "dependencies": { "@slangroom/core": "1.48.10", "qrcode": "^1.5.3" } }, "sha512-0YrDFQb+EV7kP0KXghxA9YY7KeWI3jx3bEoDPU88g8fGsElwjtqc3M2z74e+yaGtFhfrVzPBhtxOkuPiVPKZOQ=="],
 
-    "@slangroom/rdf": ["@slangroom/rdf@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "jsonld": "^8.3.3", "rdf-canonize": "^4.0.1" } }, "sha512-oAYBELDWoN/VAhrC821BeuHszJJmhAcsOuCzZ9Nx/2v1kXas4kLMiaF27ynh4kNcxH//zo4Yv4V5Ysa4CMRmkA=="],
+    "@slangroom/rdf": ["@slangroom/rdf@1.48.10", "", { "dependencies": { "@slangroom/core": "1.48.10", "jsonld": "^8.3.3", "rdf-canonize": "^4.0.1" } }, "sha512-BAeT0XTNS8G5S0676hfmmxisIbj8SP9givlXyX3u/nFvJ4H3iKoH8iJUpRE4TZ6txjkpP6rKwMpUyh5IOhJSAw=="],
 
-    "@slangroom/redis": ["@slangroom/redis@1.48.5", "", { "dependencies": { "@redis/client": "^1.5.12", "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5" } }, "sha512-yCE6BDuJgtW1Wo3EnIGkmKWnDxA9A6VE83CQJxhtguXttSprVFv3nJY19s+nzNvFwALBdtB0vxSLIEqHeGUmYA=="],
+    "@slangroom/redis": ["@slangroom/redis@1.48.10", "", { "dependencies": { "@redis/client": "^1.5.12", "@slangroom/core": "1.48.10", "@slangroom/shared": "1.48.10" } }, "sha512-dRwO/U7/WTKzBEX1Om5889xfPkf+K3fA9Hf2Y5GNTEjNCmZrb4/hNnL10Ypx/zNLObKgCGKSaiBF3A5i1PQCBg=="],
 
-    "@slangroom/shared": ["@slangroom/shared@1.48.5", "", { "dependencies": { "@slangroom/deps": "1.48.5" } }, "sha512-3UKIKWaR7KC8LsqlRcdTDZo8Trj8YDKXBTZxLnTR99Xti4eSyM8qLuQRFQatDPoDm/0buPlXtb/q9ZCmgWP+gA=="],
+    "@slangroom/shared": ["@slangroom/shared@1.48.10", "", { "dependencies": { "@slangroom/deps": "1.48.10" } }, "sha512-F6gK8n2G+4PzNqdHsPbyJS09NAGJfkVOSENMQTQheiP1RSm1AVKB3IfTCpT0Ezgioon1w2EdO6xZmtMlsl5/0g=="],
 
-    "@slangroom/shell": ["@slangroom/shell@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "execa": "^8.0.1" } }, "sha512-HMQh4FZlhLxJhNbAyXu+2f7IDOmaiZ4ys96YA9GQDT5IIUobo2gqiQJQ0bDinK6Y1wIxvWUmno7qasa7oLGmWA=="],
+    "@slangroom/shell": ["@slangroom/shell@1.48.10", "", { "dependencies": { "@slangroom/core": "1.48.10", "execa": "^8.0.1" } }, "sha512-UBovtgBc+s0/aOFgg7GBfFnUP/O1a0DZx4Msasiqm7Cy5c5YbWoJUfTiD0Qkbn9NLMIKmTX0Aa0w0r4QZ2RV1w=="],
 
-    "@slangroom/timestamp": ["@slangroom/timestamp@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5" } }, "sha512-B5X5wYigGZ8PexLYxWH3HapGq4/umzq7+gbaNx8e4sjK8LViBFrUfr7q4yEH33wJgiBb0j+dm1e1qnXAA68CLQ=="],
+    "@slangroom/timestamp": ["@slangroom/timestamp@1.48.10", "", { "dependencies": { "@slangroom/core": "1.48.10", "@slangroom/shared": "1.48.10" } }, "sha512-CKTpyV0lAMIyy/DTLHVHFgIRx72B5foIXU64edACSEg7a5UNbBKcMNkOe0pxfT6UmVgl4cepLdRXjT9fiVN8cQ=="],
 
-    "@slangroom/wallet": ["@slangroom/wallet@1.48.5", "", { "dependencies": { "@meeco/sd-jwt": "^0.0.3", "@meeco/sd-jwt-vc": "^0.0.4", "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5", "bs58": "^5.0.0", "jose": "^5.1.3" } }, "sha512-NxbDt6WGjxS4zxI9GcqKJJxjkh6E/5+FKZiz6Mc8H6Mq8lHmfvXLloceZ813AnI7Efj8x93oIK7t3M1KpzUudA=="],
+    "@slangroom/wallet": ["@slangroom/wallet@1.48.10", "", { "dependencies": { "@meeco/sd-jwt": "^0.0.3", "@meeco/sd-jwt-vc": "^0.0.4", "@slangroom/core": "1.48.10", "@slangroom/shared": "1.48.10", "bs58": "^5.0.0", "jose": "^5.1.3" } }, "sha512-x1g7NXQRHmzv5BNpac/MQAex4LDDPR4BdEbM11pBVqLOcswo4hOtOMGhLEM08lozXgsBBpj+eDwzEfx+jdExZw=="],
 
-    "@slangroom/zencode": ["@slangroom/zencode@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5" } }, "sha512-SVJ2UnH+HP1S7yPueG1AIQcRwdIk+DTbmdA6EBsFz8Tds1gCZ13mJ6z1cGb88kHGAtqAAKl+UZj6et3F3Z8snQ=="],
+    "@slangroom/zencode": ["@slangroom/zencode@1.48.10", "", { "dependencies": { "@slangroom/core": "1.48.10", "@slangroom/shared": "1.48.10" } }, "sha512-Mjh2McJnuCcvtnUvWa43fhqYDIdwRDgsp3vH4PhpC0DHbSYoGlCnAlOR0TAOxth2tXx8toBlyG1ulmeBlJ8iIA=="],
 
     "@tootallnate/once": ["@tootallnate/once@1.1.2", "", {}, "sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw=="],
 
@@ -1360,11 +1360,43 @@
 
     "yoctocolors": ["yoctocolors@2.0.2", "", {}, "sha512-Ct97huExsu7cWeEjmrXlofevF8CvzUglJ4iGUet5B8xn1oumtAZBpHU4GzYuoE6PVqcZ5hghtBrSlhwHuR1Jmw=="],
 
-    "zenroom": ["zenroom@5.21.1", "", {}, "sha512-UAE84iQpP8HDhWGz8fiH8JugrMo9F0ciLEJdvSOnkUUvbi4OO7PXPO7JJxnaXkD2teliGXw4cDj5Ce3a++4JPA=="],
+    "zenroom": ["zenroom@5.24.10", "", {}, "sha512-aoHf/rmznebUphIGPBD2+4lKzJgmgZ8p3HFvKEqJUVoo8GQJ3CFlbdNpFIpkMo806BrDr8DRXQgzljyX4zH3ug=="],
 
     "zod": ["zod@3.24.2", "", {}, "sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ=="],
 
     "@babel/highlight/chalk": ["chalk@2.4.2", "", { "dependencies": { "ansi-styles": "^3.2.1", "escape-string-regexp": "^1.0.5", "supports-color": "^5.3.0" } }, "sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ=="],
+
+    "@dyne/slangroom-chain/@slangroom/core": ["@slangroom/core@1.48.5", "", { "dependencies": { "@slangroom/deps": "1.48.5", "@slangroom/ignored": "1.48.5", "@slangroom/shared": "1.48.5", "fastest-levenshtein": "^1.0.16" } }, "sha512-QlpNGwGANTcvIT39IMet5VC7lSsylKbIZ3Jcgx9KcI4TsQNMD23jVcFozj2ZYafyT/+54qld5wp/6iWKSMlJyA=="],
+
+    "@dyne/slangroom-chain/@slangroom/db": ["@slangroom/db@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5", "pg-hstore": "^2.3.4", "sequelize": "^6.16.0", "sqlite3": "^5.0.0" } }, "sha512-v9Xoy2CA3iHCd5WEOTYTrZmik1L34AY2R5YfnK/0zqtbQ4Knevn1UK++JPfNlQ8M1PCWmPplUereLAum2145TA=="],
+
+    "@dyne/slangroom-chain/@slangroom/ethereum": ["@slangroom/ethereum@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5", "web3": "^4.3.0", "web3-validator": "^2.0.3" } }, "sha512-UQLKeghNqTbofW+qwoAlNYV/WTO1VJMESABbg9Fh77DUohigCMZQhJDaR0oHSK37W+z0F/tPosvfed0QUnRdew=="],
+
+    "@dyne/slangroom-chain/@slangroom/fs": ["@slangroom/fs@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5", "fflate": "^0.8.2" } }, "sha512-XERRkh+Z6JgqN5PX8kFVegGEjq3a0qPJ8vuIW46/Dq2FTLb7uOTScfbY64y1uQ3437pvekDxQpDYmxHqtRek1A=="],
+
+    "@dyne/slangroom-chain/@slangroom/git": ["@slangroom/git@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "isomorphic-git": "^1.25.10" } }, "sha512-LZx95/V7Mk0u0E7soXuRJjpZ4w8VZhewcQZY3K3t2hJATZ+HJjoE7G5IokBk5U+jNtVMp8sr2vsP5pfbNBq8gw=="],
+
+    "@dyne/slangroom-chain/@slangroom/helpers": ["@slangroom/helpers@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5", "@types/lodash": "^4.14.202", "lodash": "^4.17.21" } }, "sha512-Ft+9aBgy4goBLjY2y3to48/aoh7g2uIDBklGScdI1ZN8KahbJRzZTqE9wI30D8eJyetOqQ1D9jpfA4KEMt/GIg=="],
+
+    "@dyne/slangroom-chain/@slangroom/http": ["@slangroom/http@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5", "axios": "^1.6.2" } }, "sha512-sJHg9HYU7Fz2Q0lW19HmcRPtXzr7On2Q6W0FbDMcdUXHktBLNsCgUpVDmBer68cIoGKHyfi5p7L43bLL95a0rw=="],
+
+    "@dyne/slangroom-chain/@slangroom/json-schema": ["@slangroom/json-schema@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5", "ajv": "^8.13.0" } }, "sha512-gPVTZ/hiocSl5Ws4+Pzy1lW1h0yXyrHY2WIy3/xzvJFXVpSN1Fyx5cTRLB5Fqy9jRQk2KhpBNelkhdE4gy9gtw=="],
+
+    "@dyne/slangroom-chain/@slangroom/oauth": ["@slangroom/oauth@1.48.5", "", { "dependencies": { "@node-oauth/oauth2-server": "^5.1.0", "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5", "bs58": "^5.0.0", "jose": "^5.1.3" } }, "sha512-atJ2SzCLnEe21NjYw5jjryQynob8ZbUFtBOVSVukYQUkR5WJH8kS4TAmtVpP9DzkN+/kpK4nrR/rZdGpFK1U3w=="],
+
+    "@dyne/slangroom-chain/@slangroom/pocketbase": ["@slangroom/pocketbase@1.48.5", "", { "dependencies": { "@capacitor/preferences": "^6.0.3", "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5", "pocketbase": "^0.25.1", "zod": "^3.24.1" } }, "sha512-T0zCKQe5OhdY9xNkqJhSSsQPFM4igyWa0nN9Pc8iwqIloufhcHPygZo56nOj5HgIM74jqgmgBTLqOzUbzst8CA=="],
+
+    "@dyne/slangroom-chain/@slangroom/qrcode": ["@slangroom/qrcode@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "qrcode": "^1.5.3" } }, "sha512-ecjyMjlr8+1wDRnmuY96f9g/3bSmfm0yWZOIY4tmZV4qtbEa1Rd40fgmkY2x2NJ53JT54wj1DRlhii+J0HsH5g=="],
+
+    "@dyne/slangroom-chain/@slangroom/redis": ["@slangroom/redis@1.48.5", "", { "dependencies": { "@redis/client": "^1.5.12", "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5" } }, "sha512-yCE6BDuJgtW1Wo3EnIGkmKWnDxA9A6VE83CQJxhtguXttSprVFv3nJY19s+nzNvFwALBdtB0vxSLIEqHeGUmYA=="],
+
+    "@dyne/slangroom-chain/@slangroom/shell": ["@slangroom/shell@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "execa": "^8.0.1" } }, "sha512-HMQh4FZlhLxJhNbAyXu+2f7IDOmaiZ4ys96YA9GQDT5IIUobo2gqiQJQ0bDinK6Y1wIxvWUmno7qasa7oLGmWA=="],
+
+    "@dyne/slangroom-chain/@slangroom/timestamp": ["@slangroom/timestamp@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5" } }, "sha512-B5X5wYigGZ8PexLYxWH3HapGq4/umzq7+gbaNx8e4sjK8LViBFrUfr7q4yEH33wJgiBb0j+dm1e1qnXAA68CLQ=="],
+
+    "@dyne/slangroom-chain/@slangroom/wallet": ["@slangroom/wallet@1.48.5", "", { "dependencies": { "@meeco/sd-jwt": "^0.0.3", "@meeco/sd-jwt-vc": "^0.0.4", "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5", "bs58": "^5.0.0", "jose": "^5.1.3" } }, "sha512-NxbDt6WGjxS4zxI9GcqKJJxjkh6E/5+FKZiz6Mc8H6Mq8lHmfvXLloceZ813AnI7Efj8x93oIK7t3M1KpzUudA=="],
+
+    "@dyne/slangroom-chain/@slangroom/zencode": ["@slangroom/zencode@1.48.5", "", { "dependencies": { "@slangroom/core": "1.48.5", "@slangroom/shared": "1.48.5" } }, "sha512-SVJ2UnH+HP1S7yPueG1AIQcRwdIk+DTbmdA6EBsFz8Tds1gCZ13mJ6z1cGb88kHGAtqAAKl+UZj6et3F3Z8snQ=="],
 
     "@dyne/slangroom-chain/execa": ["execa@8.0.1", "", { "dependencies": { "cross-spawn": "^7.0.3", "get-stream": "^8.0.1", "human-signals": "^5.0.0", "is-stream": "^3.0.0", "merge-stream": "^2.0.0", "npm-run-path": "^5.1.0", "onetime": "^6.0.0", "signal-exit": "^4.1.0", "strip-final-newline": "^3.0.0" } }, "sha512-VyhnebXciFV2DESc+p6B+y0LjSm0krU4OgJN44qFAhBY0TJ+1V61tYD2+wHusZ6F9n5K+vl8k0sTy7PEfV4qpg=="],
 
@@ -1528,6 +1560,36 @@
 
     "@babel/highlight/chalk/supports-color": ["supports-color@5.5.0", "", { "dependencies": { "has-flag": "^3.0.0" } }, "sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow=="],
 
+    "@dyne/slangroom-chain/@slangroom/core/@slangroom/deps": ["@slangroom/deps@1.48.5", "", { "dependencies": { "chalk": "^5.3.0", "chevrotain": "^10.5.0" }, "peerDependencies": { "zenroom": "^5.0.0" } }, "sha512-0TduTVL9DHP+Kc2KgNPK7ZIIZZOKbK7Y8/vZCqNNq3Z2ywz2XJDRfRsAWoD8wTSsBp6mGXs/UKZxtr7UgTIayA=="],
+
+    "@dyne/slangroom-chain/@slangroom/core/@slangroom/ignored": ["@slangroom/ignored@1.48.5", "", { "dependencies": { "@slangroom/deps": "1.48.5", "@slangroom/shared": "1.48.5" } }, "sha512-FfL0fpE8ZueuVZta2reXq6q63Jxm6piZoZTHOrt2bVWWWOqEBIC+ehz4dPZxXFL6lnjdl3ij7+gcW3irC0anDA=="],
+
+    "@dyne/slangroom-chain/@slangroom/core/@slangroom/shared": ["@slangroom/shared@1.48.5", "", { "dependencies": { "@slangroom/deps": "1.48.5" } }, "sha512-3UKIKWaR7KC8LsqlRcdTDZo8Trj8YDKXBTZxLnTR99Xti4eSyM8qLuQRFQatDPoDm/0buPlXtb/q9ZCmgWP+gA=="],
+
+    "@dyne/slangroom-chain/@slangroom/db/@slangroom/shared": ["@slangroom/shared@1.48.5", "", { "dependencies": { "@slangroom/deps": "1.48.5" } }, "sha512-3UKIKWaR7KC8LsqlRcdTDZo8Trj8YDKXBTZxLnTR99Xti4eSyM8qLuQRFQatDPoDm/0buPlXtb/q9ZCmgWP+gA=="],
+
+    "@dyne/slangroom-chain/@slangroom/ethereum/@slangroom/shared": ["@slangroom/shared@1.48.5", "", { "dependencies": { "@slangroom/deps": "1.48.5" } }, "sha512-3UKIKWaR7KC8LsqlRcdTDZo8Trj8YDKXBTZxLnTR99Xti4eSyM8qLuQRFQatDPoDm/0buPlXtb/q9ZCmgWP+gA=="],
+
+    "@dyne/slangroom-chain/@slangroom/fs/@slangroom/shared": ["@slangroom/shared@1.48.5", "", { "dependencies": { "@slangroom/deps": "1.48.5" } }, "sha512-3UKIKWaR7KC8LsqlRcdTDZo8Trj8YDKXBTZxLnTR99Xti4eSyM8qLuQRFQatDPoDm/0buPlXtb/q9ZCmgWP+gA=="],
+
+    "@dyne/slangroom-chain/@slangroom/helpers/@slangroom/shared": ["@slangroom/shared@1.48.5", "", { "dependencies": { "@slangroom/deps": "1.48.5" } }, "sha512-3UKIKWaR7KC8LsqlRcdTDZo8Trj8YDKXBTZxLnTR99Xti4eSyM8qLuQRFQatDPoDm/0buPlXtb/q9ZCmgWP+gA=="],
+
+    "@dyne/slangroom-chain/@slangroom/http/@slangroom/shared": ["@slangroom/shared@1.48.5", "", { "dependencies": { "@slangroom/deps": "1.48.5" } }, "sha512-3UKIKWaR7KC8LsqlRcdTDZo8Trj8YDKXBTZxLnTR99Xti4eSyM8qLuQRFQatDPoDm/0buPlXtb/q9ZCmgWP+gA=="],
+
+    "@dyne/slangroom-chain/@slangroom/json-schema/@slangroom/shared": ["@slangroom/shared@1.48.5", "", { "dependencies": { "@slangroom/deps": "1.48.5" } }, "sha512-3UKIKWaR7KC8LsqlRcdTDZo8Trj8YDKXBTZxLnTR99Xti4eSyM8qLuQRFQatDPoDm/0buPlXtb/q9ZCmgWP+gA=="],
+
+    "@dyne/slangroom-chain/@slangroom/oauth/@slangroom/shared": ["@slangroom/shared@1.48.5", "", { "dependencies": { "@slangroom/deps": "1.48.5" } }, "sha512-3UKIKWaR7KC8LsqlRcdTDZo8Trj8YDKXBTZxLnTR99Xti4eSyM8qLuQRFQatDPoDm/0buPlXtb/q9ZCmgWP+gA=="],
+
+    "@dyne/slangroom-chain/@slangroom/pocketbase/@slangroom/shared": ["@slangroom/shared@1.48.5", "", { "dependencies": { "@slangroom/deps": "1.48.5" } }, "sha512-3UKIKWaR7KC8LsqlRcdTDZo8Trj8YDKXBTZxLnTR99Xti4eSyM8qLuQRFQatDPoDm/0buPlXtb/q9ZCmgWP+gA=="],
+
+    "@dyne/slangroom-chain/@slangroom/redis/@slangroom/shared": ["@slangroom/shared@1.48.5", "", { "dependencies": { "@slangroom/deps": "1.48.5" } }, "sha512-3UKIKWaR7KC8LsqlRcdTDZo8Trj8YDKXBTZxLnTR99Xti4eSyM8qLuQRFQatDPoDm/0buPlXtb/q9ZCmgWP+gA=="],
+
+    "@dyne/slangroom-chain/@slangroom/timestamp/@slangroom/shared": ["@slangroom/shared@1.48.5", "", { "dependencies": { "@slangroom/deps": "1.48.5" } }, "sha512-3UKIKWaR7KC8LsqlRcdTDZo8Trj8YDKXBTZxLnTR99Xti4eSyM8qLuQRFQatDPoDm/0buPlXtb/q9ZCmgWP+gA=="],
+
+    "@dyne/slangroom-chain/@slangroom/wallet/@slangroom/shared": ["@slangroom/shared@1.48.5", "", { "dependencies": { "@slangroom/deps": "1.48.5" } }, "sha512-3UKIKWaR7KC8LsqlRcdTDZo8Trj8YDKXBTZxLnTR99Xti4eSyM8qLuQRFQatDPoDm/0buPlXtb/q9ZCmgWP+gA=="],
+
+    "@dyne/slangroom-chain/@slangroom/zencode/@slangroom/shared": ["@slangroom/shared@1.48.5", "", { "dependencies": { "@slangroom/deps": "1.48.5" } }, "sha512-3UKIKWaR7KC8LsqlRcdTDZo8Trj8YDKXBTZxLnTR99Xti4eSyM8qLuQRFQatDPoDm/0buPlXtb/q9ZCmgWP+gA=="],
+
     "@dyne/slangroom-chain/execa/get-stream": ["get-stream@8.0.1", "", {}, "sha512-VaUJspBffn/LMCJVoMvSAdmscJyS1auj5Zulnn5UoYcY531UWmdwhRWkcGKnGU93m5HSXP9LP2usOryrBtQowA=="],
 
     "@dyne/slangroom-chain/execa/human-signals": ["human-signals@5.0.0", "", {}, "sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ=="],
@@ -1689,6 +1751,30 @@
     "wrap-ansi/ansi-styles/color-convert": ["color-convert@2.0.1", "", { "dependencies": { "color-name": "~1.1.4" } }, "sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ=="],
 
     "@babel/highlight/chalk/supports-color/has-flag": ["has-flag@3.0.0", "", {}, "sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw=="],
+
+    "@dyne/slangroom-chain/@slangroom/db/@slangroom/shared/@slangroom/deps": ["@slangroom/deps@1.48.5", "", { "dependencies": { "chalk": "^5.3.0", "chevrotain": "^10.5.0" }, "peerDependencies": { "zenroom": "^5.0.0" } }, "sha512-0TduTVL9DHP+Kc2KgNPK7ZIIZZOKbK7Y8/vZCqNNq3Z2ywz2XJDRfRsAWoD8wTSsBp6mGXs/UKZxtr7UgTIayA=="],
+
+    "@dyne/slangroom-chain/@slangroom/ethereum/@slangroom/shared/@slangroom/deps": ["@slangroom/deps@1.48.5", "", { "dependencies": { "chalk": "^5.3.0", "chevrotain": "^10.5.0" }, "peerDependencies": { "zenroom": "^5.0.0" } }, "sha512-0TduTVL9DHP+Kc2KgNPK7ZIIZZOKbK7Y8/vZCqNNq3Z2ywz2XJDRfRsAWoD8wTSsBp6mGXs/UKZxtr7UgTIayA=="],
+
+    "@dyne/slangroom-chain/@slangroom/fs/@slangroom/shared/@slangroom/deps": ["@slangroom/deps@1.48.5", "", { "dependencies": { "chalk": "^5.3.0", "chevrotain": "^10.5.0" }, "peerDependencies": { "zenroom": "^5.0.0" } }, "sha512-0TduTVL9DHP+Kc2KgNPK7ZIIZZOKbK7Y8/vZCqNNq3Z2ywz2XJDRfRsAWoD8wTSsBp6mGXs/UKZxtr7UgTIayA=="],
+
+    "@dyne/slangroom-chain/@slangroom/helpers/@slangroom/shared/@slangroom/deps": ["@slangroom/deps@1.48.5", "", { "dependencies": { "chalk": "^5.3.0", "chevrotain": "^10.5.0" }, "peerDependencies": { "zenroom": "^5.0.0" } }, "sha512-0TduTVL9DHP+Kc2KgNPK7ZIIZZOKbK7Y8/vZCqNNq3Z2ywz2XJDRfRsAWoD8wTSsBp6mGXs/UKZxtr7UgTIayA=="],
+
+    "@dyne/slangroom-chain/@slangroom/http/@slangroom/shared/@slangroom/deps": ["@slangroom/deps@1.48.5", "", { "dependencies": { "chalk": "^5.3.0", "chevrotain": "^10.5.0" }, "peerDependencies": { "zenroom": "^5.0.0" } }, "sha512-0TduTVL9DHP+Kc2KgNPK7ZIIZZOKbK7Y8/vZCqNNq3Z2ywz2XJDRfRsAWoD8wTSsBp6mGXs/UKZxtr7UgTIayA=="],
+
+    "@dyne/slangroom-chain/@slangroom/json-schema/@slangroom/shared/@slangroom/deps": ["@slangroom/deps@1.48.5", "", { "dependencies": { "chalk": "^5.3.0", "chevrotain": "^10.5.0" }, "peerDependencies": { "zenroom": "^5.0.0" } }, "sha512-0TduTVL9DHP+Kc2KgNPK7ZIIZZOKbK7Y8/vZCqNNq3Z2ywz2XJDRfRsAWoD8wTSsBp6mGXs/UKZxtr7UgTIayA=="],
+
+    "@dyne/slangroom-chain/@slangroom/oauth/@slangroom/shared/@slangroom/deps": ["@slangroom/deps@1.48.5", "", { "dependencies": { "chalk": "^5.3.0", "chevrotain": "^10.5.0" }, "peerDependencies": { "zenroom": "^5.0.0" } }, "sha512-0TduTVL9DHP+Kc2KgNPK7ZIIZZOKbK7Y8/vZCqNNq3Z2ywz2XJDRfRsAWoD8wTSsBp6mGXs/UKZxtr7UgTIayA=="],
+
+    "@dyne/slangroom-chain/@slangroom/pocketbase/@slangroom/shared/@slangroom/deps": ["@slangroom/deps@1.48.5", "", { "dependencies": { "chalk": "^5.3.0", "chevrotain": "^10.5.0" }, "peerDependencies": { "zenroom": "^5.0.0" } }, "sha512-0TduTVL9DHP+Kc2KgNPK7ZIIZZOKbK7Y8/vZCqNNq3Z2ywz2XJDRfRsAWoD8wTSsBp6mGXs/UKZxtr7UgTIayA=="],
+
+    "@dyne/slangroom-chain/@slangroom/redis/@slangroom/shared/@slangroom/deps": ["@slangroom/deps@1.48.5", "", { "dependencies": { "chalk": "^5.3.0", "chevrotain": "^10.5.0" }, "peerDependencies": { "zenroom": "^5.0.0" } }, "sha512-0TduTVL9DHP+Kc2KgNPK7ZIIZZOKbK7Y8/vZCqNNq3Z2ywz2XJDRfRsAWoD8wTSsBp6mGXs/UKZxtr7UgTIayA=="],
+
+    "@dyne/slangroom-chain/@slangroom/timestamp/@slangroom/shared/@slangroom/deps": ["@slangroom/deps@1.48.5", "", { "dependencies": { "chalk": "^5.3.0", "chevrotain": "^10.5.0" }, "peerDependencies": { "zenroom": "^5.0.0" } }, "sha512-0TduTVL9DHP+Kc2KgNPK7ZIIZZOKbK7Y8/vZCqNNq3Z2ywz2XJDRfRsAWoD8wTSsBp6mGXs/UKZxtr7UgTIayA=="],
+
+    "@dyne/slangroom-chain/@slangroom/wallet/@slangroom/shared/@slangroom/deps": ["@slangroom/deps@1.48.5", "", { "dependencies": { "chalk": "^5.3.0", "chevrotain": "^10.5.0" }, "peerDependencies": { "zenroom": "^5.0.0" } }, "sha512-0TduTVL9DHP+Kc2KgNPK7ZIIZZOKbK7Y8/vZCqNNq3Z2ywz2XJDRfRsAWoD8wTSsBp6mGXs/UKZxtr7UgTIayA=="],
+
+    "@dyne/slangroom-chain/@slangroom/zencode/@slangroom/shared/@slangroom/deps": ["@slangroom/deps@1.48.5", "", { "dependencies": { "chalk": "^5.3.0", "chevrotain": "^10.5.0" }, "peerDependencies": { "zenroom": "^5.0.0" } }, "sha512-0TduTVL9DHP+Kc2KgNPK7ZIIZZOKbK7Y8/vZCqNNq3Z2ywz2XJDRfRsAWoD8wTSsBp6mGXs/UKZxtr7UgTIayA=="],
 
     "@dyne/slangroom-chain/execa/npm-run-path/path-key": ["path-key@4.0.0", "", {}, "sha512-haREypq7xkM7ErfgIyA0z+Bj4AGKlMSdlQE2jvJo6huWD1EdkKYV+G/T4nq0YEF2vgTT8kqMFKo1uHn950r4SQ=="],
 
