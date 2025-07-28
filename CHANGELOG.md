@@ -1,5 +1,12 @@
 ## [1.6.26](https://github.com/dyne/slangroom-exec/compare/v1.6.25...v1.6.26) (2025-07-28)
 
+
+### Bug Fixes
+
+* use bun@1.2.18 ([#93](https://github.com/dyne/slangroom-exec/issues/93)) ([4ca231d](https://github.com/dyne/slangroom-exec/commit/4ca231d7838ef09b6c4dd67872594cbe5065f7ec))
+
+## [1.6.26](https://github.com/dyne/slangroom-exec/compare/v1.6.25...v1.6.26) (2025-07-28)
+
 ## [1.6.25](https://github.com/dyne/slangroom-exec/compare/v1.6.24...v1.6.25) (2025-06-25)
 
 
