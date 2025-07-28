@@ -18,7 +18,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@dyne/slangroom-chain": "^1.9.19",
+    "@dyne/slangroom-chain": "^1.10.6",
     "@slangroom/core": "^1.48.10",
     "@slangroom/db": "^1.48.10",
     "@slangroom/deps": "^1.48.10",
