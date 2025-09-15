@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/dyne/slangroom-exec/compare/v1.6.29...v1.7.0) (2025-09-15)
+
+
+### Features
+
+* add @slangroom/did plugin ([#101](https://github.com/dyne/slangroom-exec/issues/101)) ([1cde690](https://github.com/dyne/slangroom-exec/commit/1cde6906c1f717ec8d901a5620479f7963c2ab4f))
+
 ## [1.6.29](https://github.com/dyne/slangroom-exec/compare/v1.6.28...v1.6.29) (2025-08-14)
 
 ## [1.6.28](https://github.com/dyne/slangroom-exec/compare/v1.6.27...v1.6.28) (2025-08-13)

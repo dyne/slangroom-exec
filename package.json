@@ -21,7 +21,7 @@
     "@dyne/slangroom-chain": "^1.10.6",
     "@slangroom/core": "^1.49.5",
     "@slangroom/db": "^1.49.5",
-		"@slangroom/did": "^1.49.5",
+    "@slangroom/did": "^1.49.5",
     "@slangroom/deps": "^1.49.5",
     "@slangroom/ethereum": "^1.49.5",
     "@slangroom/fs": "^1.49.5",
@@ -40,5 +40,5 @@
     "@slangroom/zencode": "^1.49.5",
     "zenroom": "^5.25.1"
   },
-  "version": "1.6.29"
+  "version": "1.7.0"
 }
