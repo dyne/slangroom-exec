@@ -38,7 +38,7 @@
     "@slangroom/timestamp": "^1.51.1",
     "@slangroom/wallet": "^1.51.1",
     "@slangroom/zencode": "^1.51.1",
-    "zenroom": "^5.29.2"
+    "zenroom": "^5.30.4"
   },
   "version": "1.7.2"
 }
