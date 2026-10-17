@@ -79,7 +79,6 @@ jobs:
         id: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   publish_docker_image:
     name: 🐳 Publish Docker image
